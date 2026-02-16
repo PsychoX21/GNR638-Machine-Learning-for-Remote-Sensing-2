@@ -54,6 +54,8 @@ make test
 ### 2. Run Training and Evaluation
 
 ```bash
+# Change the dataset path to the location where the directories are present
+
 # MNIST (10 digits)
 make train DATA=datasets/data_1 CONFIG=configs/mnist.yaml
 make eval DATA=datasets/data_1 MODEL=checkpoints/best_data_1.pth
