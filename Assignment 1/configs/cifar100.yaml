@@ -1,0 +1,100 @@
+# ==========================================================
+# CIFAR-100 - ResNet-20 (120 Epoch Optimized)
+# Best balance of convergence speed + refinement
+# ==========================================================
+
+model:
+  name: "ResNet20_CIFAR100_120Epoch"
+
+  architecture:
+
+    # Stem (32x32)
+    - type: "Conv2D"
+      in_channels: 3
+      out_channels: 16
+      kernel_size: 3
+      stride: 1
+      padding: 1
+      bias: false
+
+    - type: "BatchNorm2D"
+      num_features: 16
+
+    - type: "ReLU"
+
+    # Stage 1 (32x32)
+    - type: "ResidualBlock"
+      in_channels: 16
+      out_channels: 16
+      stride: 1
+    - type: "ResidualBlock"
+      in_channels: 16
+      out_channels: 16
+      stride: 1
+    - type: "ResidualBlock"
+      in_channels: 16
+      out_channels: 16
+      stride: 1
+
+    # Stage 2 (16x16)
+    - type: "ResidualBlock"
+      in_channels: 16
+      out_channels: 32
+      stride: 2
+    - type: "ResidualBlock"
+      in_channels: 32
+      out_channels: 32
+      stride: 1
+    - type: "ResidualBlock"
+      in_channels: 32
+      out_channels: 32
+      stride: 1
+
+    # Stage 3 (8x8)
+    - type: "ResidualBlock"
+      in_channels: 32
+      out_channels: 64
+      stride: 2
+    - type: "ResidualBlock"
+      in_channels: 64
+      out_channels: 64
+      stride: 1
+    - type: "ResidualBlock"
+      in_channels: 64
+      out_channels: 64
+      stride: 1
+
+    # Head
+    - type: "GlobalAveragePooling2D"
+    - type: "Flatten"
+    - type: "Linear"
+      in_features: 64
+      out_features: "num_classes"
+
+training:
+  epochs: 100
+  batch_size: 128
+
+  optimizer: "SGD"
+  learning_rate: 0.1
+  momentum: 0.9
+  nesterov: true
+  weight_decay: 0.0005
+
+  scheduler:
+    type: "CosineAnnealingLR"
+    T_max: 100
+    eta_min: 0.0001
+
+data:
+  image_size: 32
+  channels: 3
+
+  augmentation:
+    enabled: true
+    random_crop_padding: 4
+    horizontal_flip: 0.2
+
+device:
+  use_cuda: true
+  device_id: 0

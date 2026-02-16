@@ -1,0 +1,51 @@
+{
+    "files.associations": {
+        "*.cu": "cuda-cpp",
+        "*.cuh": "cuda-cpp",
+        "*.hpp": "cpp",
+        "*.h": "cpp"
+    },
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/deepnet/cpp/include",
+        "${workspaceFolder}/deepnet/cpp/include/**",
+        "${workspaceFolder}/pybind11/include"
+    ],
+    "C_Cpp.default.browse.path": [
+        "${workspaceFolder}/deepnet/cpp/include",
+        "${workspaceFolder}/deepnet/cpp/src",
+        "${workspaceFolder}/pybind11/include"
+    ],
+    "C_Cpp.default.defines": [
+        "M_PI=3.14159265358979323846"
+    ],
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.compilerPath": "",
+    "C_Cpp.errorSquiggles": "enabled",
+    "C_Cpp.intelliSenseEngine": "default",
+    "C_Cpp.intelliSenseEngineFallback": "enabled",
+    "C_Cpp.loggingLevel": "Warning",
+    "clangd.path": "",
+    "clangd.arguments": [],
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools",
+        "editor.formatOnSave": false
+    },
+    "[python]": {
+        "editor.formatOnSave": false
+    },
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/build": false,
+        "**/.venv": true,
+        "**/venv": true,
+        "**/*.egg-info": true
+    },
+    "python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python",
+    "python.formatting.provider": "none",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": false,
+    "cmake.configureOnOpen": false,
+    "cmake.buildDirectory": "${workspaceFolder}/build"
+}

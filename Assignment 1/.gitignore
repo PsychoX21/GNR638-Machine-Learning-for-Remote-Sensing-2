@@ -1,0 +1,52 @@
+# .gitignore for DeepNet Framework
+
+# Build directories
+build/
+*.egg-info/
+dist/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.dll
+*.dylib
+
+# CMake generated files (keep CMakeLists.txt)
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+*.cmake
+!CMakeLists.txt
+
+# IDE
+# .vscode/  # Now cleaned for cross-platform, safe to commit
+.idea/
+*.swp
+*.swo
+*~
+
+# Python
+venv/
+.env
+*.egg
+
+# Checkpoints and logs
+checkpoints/*.pth
+!checkpoints/.gitkeep
+logs/*.log
+!logs/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+build_log*.txt
+cmake_config*.txt
+
+# Dataset zip files
+datasets/*.zip
+datasets/**/*.png

@@ -1,0 +1,105 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/deepnet/cpp/include",
+                "${workspaceFolder}/deepnet/cpp/include/**",
+                "${workspaceFolder}/pybind11/include",
+                "${default}"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "M_PI=3.14159265358979323846"
+            ],
+            "windowsSdkVersion": "10.0.22621.0",
+            "compilerPath": "cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64",
+            "compilerArgs": [],
+            "configurationProvider": "ms-vscode.cmake-tools"
+        },
+        {
+            "name": "Win32-CUDA",
+            "includePath": [
+                "${workspaceFolder}/deepnet/cpp/include",
+                "${workspaceFolder}/deepnet/cpp/include/**",
+                "${workspaceFolder}/pybind11/include",
+                "${env:CUDA_PATH}/include",
+                "${default}"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "M_PI=3.14159265358979323846",
+                "USE_CUDA"
+            ],
+            "windowsSdkVersion": "10.0.22621.0",
+            "compilerPath": "cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64"
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/deepnet/cpp/include",
+                "${workspaceFolder}/deepnet/cpp/include/**",
+                "${workspaceFolder}/pybind11/include",
+                "${default}"
+            ],
+            "defines": [
+                "M_PI=3.14159265358979323846"
+            ],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        },
+        {
+            "name": "Linux-CUDA",
+            "includePath": [
+                "${workspaceFolder}/deepnet/cpp/include",
+                "${workspaceFolder}/deepnet/cpp/include/**",
+                "${workspaceFolder}/pybind11/include",
+                "/usr/local/cuda/include",
+                "${default}"
+            ],
+            "defines": [
+                "M_PI=3.14159265358979323846",
+                "USE_CUDA"
+            ],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        },
+        {
+            "name": "macOS",
+            "includePath": [
+                "${workspaceFolder}/deepnet/cpp/include",
+                "${workspaceFolder}/deepnet/cpp/include/**",
+                "${workspaceFolder}/pybind11/include",
+                "${default}"
+            ],
+            "defines": [
+                "M_PI=3.14159265358979323846"
+            ],
+            "compilerPath": "/usr/bin/clang++",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-clang-x64",
+            "macFrameworkPath": [
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4,
+    "enableConfigurationSquiggles": true
+}

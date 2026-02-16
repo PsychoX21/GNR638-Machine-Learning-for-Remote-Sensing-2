@@ -17,7 +17,9 @@ This repository contains coursework, assignments, and projects for **GNR638: Mac
 ---
 
 **Collaborators**:
-    - Saksham Khandelwal (24B0965)
-    - Pawan Kumar Meena (24B0904)
-    - Rohan Jadhav (24B1012)
+
+- Saksham Khandelwal (24B0965)
+- Pawan Kumar Meena (24B0904)
+- Rohan Jadhav (24B1012)
+
 **Institute**: IIT Bombay

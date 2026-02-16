@@ -1,0 +1,85 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build DeepNet (Makefile)",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "build"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build the C++ backend using Makefile"
+        },
+        {
+            "label": "Install DeepNet",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "install"
+            ],
+            "problemMatcher": [],
+            "detail": "Install Python package"
+        },
+        {
+            "label": "Build and Install",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "build",
+                "install"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build C++ backend and install Python package"
+        },
+        {
+            "label": "Clean Build",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "clean"
+            ],
+            "problemMatcher": [],
+            "detail": "Clean build artifacts"
+        },
+        {
+            "label": "Train on data_1 (test)",
+            "type": "shell",
+            "command": "${command:python.interpreterPath}",
+            "args": [
+                "scripts/train.py",
+                "--dataset",
+                "datasets/data_1",
+                "--config",
+                "configs/model_config.yaml",
+                "--epochs",
+                "2"
+            ],
+            "problemMatcher": [],
+            "detail": "Quick training test (2 epochs)"
+        },
+        {
+            "label": "Evaluate on data_1",
+            "type": "shell",
+            "command": "${command:python.interpreterPath}",
+            "args": [
+                "scripts/evaluate.py",
+                "--dataset",
+                "datasets/data_1",
+                "--checkpoint",
+                "checkpoints/best.pth"
+            ],
+            "problemMatcher": [],
+            "detail": "Evaluate model on data_1"
+        }
+    ]
+}
