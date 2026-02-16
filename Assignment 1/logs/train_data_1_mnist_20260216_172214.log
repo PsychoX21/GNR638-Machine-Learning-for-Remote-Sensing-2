@@ -1,0 +1,1068 @@
+Logging to: logs/train_data_1_mnist_20260216_172214.log
+======================================================================
+DeepNet Training
+======================================================================
+
+Building model config from: configs\mnist.yaml
+Image size: 32x32, Channels: 1, Batch size: 128, Epochs: 20
+
+Loading dataset: datasets/data_1 (data_1)
+Preloading 54000 train samples...
+Preload complete. 54000 images in RAM.
+Preloading 6000 val samples...
+Preload complete. 6000 images in RAM.
+Dataset loading time: 11.02 seconds
+Number of classes: 10
+Train samples: 54000, Val samples: 6000
+
+Model Statistics:
+  Parameters: 272,186
+  MACs: 5,186,338,816
+  FLOPs: 10,372,677,632
+
+CUDA status: enabled
+Moving model to CUDA...
+
+Optimizer: SGD, LR: 0.1
+Scheduler: CosineAnnealingLR (T_max=20, eta_min=0.0001)
+
+======================================================================
+Training Started
+======================================================================
+Epoch [1] Batch [0/422] Loss: 4.3306 Acc: 7.81%
+Epoch [1] Batch [10/422] Loss: 1.6477 Acc: 24.57%
+Epoch [1] Batch [20/422] Loss: 0.7071 Acc: 43.71%
+Epoch [1] Batch [30/422] Loss: 0.3028 Acc: 56.60%
+Epoch [1] Batch [40/422] Loss: 0.2379 Acc: 64.58%
+Epoch [1] Batch [50/422] Loss: 0.2555 Acc: 70.16%
+Epoch [1] Batch [60/422] Loss: 0.2326 Acc: 73.71%
+Epoch [1] Batch [70/422] Loss: 0.2820 Acc: 76.45%
+Epoch [1] Batch [80/422] Loss: 0.1532 Acc: 78.62%
+Epoch [1] Batch [90/422] Loss: 0.1500 Acc: 80.41%
+Epoch [1] Batch [100/422] Loss: 0.1240 Acc: 81.78%
+Epoch [1] Batch [110/422] Loss: 0.1703 Acc: 83.00%
+Epoch [1] Batch [120/422] Loss: 0.1166 Acc: 84.04%
+Epoch [1] Batch [130/422] Loss: 0.1259 Acc: 84.91%
+Epoch [1] Batch [140/422] Loss: 0.1782 Acc: 85.64%
+Epoch [1] Batch [150/422] Loss: 0.1479 Acc: 86.34%
+Epoch [1] Batch [160/422] Loss: 0.1179 Acc: 86.92%
+Epoch [1] Batch [170/422] Loss: 0.2318 Acc: 87.49%
+Epoch [1] Batch [180/422] Loss: 0.0742 Acc: 88.04%
+Epoch [1] Batch [190/422] Loss: 0.0867 Acc: 88.51%
+Epoch [1] Batch [200/422] Loss: 0.1306 Acc: 88.91%
+Epoch [1] Batch [210/422] Loss: 0.1618 Acc: 89.29%
+Epoch [1] Batch [220/422] Loss: 0.1826 Acc: 89.61%
+Epoch [1] Batch [230/422] Loss: 0.0889 Acc: 89.94%
+Epoch [1] Batch [240/422] Loss: 0.0941 Acc: 90.21%
+Epoch [1] Batch [250/422] Loss: 0.0967 Acc: 90.47%
+Epoch [1] Batch [260/422] Loss: 0.1494 Acc: 90.70%
+Epoch [1] Batch [270/422] Loss: 0.0609 Acc: 90.95%
+Epoch [1] Batch [280/422] Loss: 0.1547 Acc: 91.15%
+Epoch [1] Batch [290/422] Loss: 0.0844 Acc: 91.37%
+Epoch [1] Batch [300/422] Loss: 0.0722 Acc: 91.56%
+Epoch [1] Batch [310/422] Loss: 0.0862 Acc: 91.75%
+Epoch [1] Batch [320/422] Loss: 0.2076 Acc: 91.90%
+Epoch [1] Batch [330/422] Loss: 0.0733 Acc: 92.08%
+Epoch [1] Batch [340/422] Loss: 0.0626 Acc: 92.24%
+Epoch [1] Batch [350/422] Loss: 0.0542 Acc: 92.39%
+Epoch [1] Batch [360/422] Loss: 0.1074 Acc: 92.53%
+Epoch [1] Batch [370/422] Loss: 0.0290 Acc: 92.67%
+Epoch [1] Batch [380/422] Loss: 0.0558 Acc: 92.79%
+Epoch [1] Batch [390/422] Loss: 0.0173 Acc: 92.90%
+Epoch [1] Batch [400/422] Loss: 0.0808 Acc: 93.04%
+Epoch [1] Batch [410/422] Loss: 0.0815 Acc: 93.16%
+Epoch [1] Batch [420/422] Loss: 0.0737 Acc: 93.28%
+
+======================================================================
+Epoch 1/20
+Train Loss: 0.2183, Train Acc: 93.29%
+Val Loss: 0.1171, Val Acc: 96.38%
+Time: 107.90s
+======================================================================
+
+[BEST] Saved best model -> checkpoints/best_data_1.pth (Val Acc: 96.38%)
+Epoch [2] Batch [0/422] Loss: 0.0420 Acc: 99.22%
+Epoch [2] Batch [10/422] Loss: 0.0271 Acc: 98.65%
+Epoch [2] Batch [20/422] Loss: 0.1131 Acc: 98.51%
+Epoch [2] Batch [30/422] Loss: 0.0397 Acc: 98.31%
+Epoch [2] Batch [40/422] Loss: 0.1034 Acc: 98.34%
+Epoch [2] Batch [50/422] Loss: 0.1157 Acc: 98.19%
+Epoch [2] Batch [60/422] Loss: 0.0699 Acc: 98.21%
+Epoch [2] Batch [70/422] Loss: 0.0703 Acc: 98.12%
+Epoch [2] Batch [80/422] Loss: 0.0778 Acc: 98.13%
+Epoch [2] Batch [90/422] Loss: 0.0571 Acc: 98.07%
+Epoch [2] Batch [100/422] Loss: 0.0808 Acc: 98.01%
+Epoch [2] Batch [110/422] Loss: 0.0862 Acc: 98.04%
+Epoch [2] Batch [120/422] Loss: 0.0418 Acc: 98.08%
+Epoch [2] Batch [130/422] Loss: 0.0884 Acc: 98.08%
+Epoch [2] Batch [140/422] Loss: 0.0160 Acc: 98.09%
+Epoch [2] Batch [150/422] Loss: 0.0276 Acc: 98.08%
+Epoch [2] Batch [160/422] Loss: 0.1698 Acc: 98.11%
+Epoch [2] Batch [170/422] Loss: 0.0486 Acc: 98.10%
+Epoch [2] Batch [180/422] Loss: 0.0973 Acc: 98.12%
+Epoch [2] Batch [190/422] Loss: 0.0445 Acc: 98.12%
+Epoch [2] Batch [200/422] Loss: 0.0181 Acc: 98.11%
+Epoch [2] Batch [210/422] Loss: 0.0580 Acc: 98.09%
+Epoch [2] Batch [220/422] Loss: 0.0617 Acc: 98.08%
+Epoch [2] Batch [230/422] Loss: 0.0842 Acc: 98.08%
+Epoch [2] Batch [240/422] Loss: 0.0412 Acc: 98.09%
+Epoch [2] Batch [250/422] Loss: 0.0337 Acc: 98.12%
+Epoch [2] Batch [260/422] Loss: 0.0246 Acc: 98.10%
+Epoch [2] Batch [270/422] Loss: 0.0626 Acc: 98.12%
+Epoch [2] Batch [280/422] Loss: 0.0670 Acc: 98.12%
+Epoch [2] Batch [290/422] Loss: 0.0253 Acc: 98.14%
+Epoch [2] Batch [300/422] Loss: 0.0893 Acc: 98.13%
+Epoch [2] Batch [310/422] Loss: 0.0263 Acc: 98.15%
+Epoch [2] Batch [320/422] Loss: 0.0682 Acc: 98.14%
+Epoch [2] Batch [330/422] Loss: 0.0412 Acc: 98.16%
+Epoch [2] Batch [340/422] Loss: 0.0230 Acc: 98.16%
+Epoch [2] Batch [350/422] Loss: 0.0383 Acc: 98.17%
+Epoch [2] Batch [360/422] Loss: 0.0144 Acc: 98.18%
+Epoch [2] Batch [370/422] Loss: 0.0867 Acc: 98.20%
+Epoch [2] Batch [380/422] Loss: 0.0263 Acc: 98.20%
+Epoch [2] Batch [390/422] Loss: 0.0350 Acc: 98.20%
+Epoch [2] Batch [400/422] Loss: 0.0423 Acc: 98.20%
+Epoch [2] Batch [410/422] Loss: 0.0782 Acc: 98.22%
+Epoch [2] Batch [420/422] Loss: 0.1037 Acc: 98.22%
+
+======================================================================
+Epoch 2/20
+Train Loss: 0.0567, Train Acc: 98.22%
+Val Loss: 0.0940, Val Acc: 96.70%
+Time: 107.37s
+======================================================================
+
+[BEST] Saved best model -> checkpoints/best_data_1.pth (Val Acc: 96.70%)
+Epoch [3] Batch [0/422] Loss: 0.0614 Acc: 98.44%
+Epoch [3] Batch [10/422] Loss: 0.0264 Acc: 98.86%
+Epoch [3] Batch [20/422] Loss: 0.0466 Acc: 98.96%
+Epoch [3] Batch [30/422] Loss: 0.0168 Acc: 99.07%
+Epoch [3] Batch [40/422] Loss: 0.0109 Acc: 99.10%
+Epoch [3] Batch [50/422] Loss: 0.0186 Acc: 99.16%
+Epoch [3] Batch [60/422] Loss: 0.0229 Acc: 99.15%
+Epoch [3] Batch [70/422] Loss: 0.0182 Acc: 99.09%
+Epoch [3] Batch [80/422] Loss: 0.1450 Acc: 99.01%
+Epoch [3] Batch [90/422] Loss: 0.0347 Acc: 98.97%
+Epoch [3] Batch [100/422] Loss: 0.0318 Acc: 98.94%
+Epoch [3] Batch [110/422] Loss: 0.0198 Acc: 98.89%
+Epoch [3] Batch [120/422] Loss: 0.0457 Acc: 98.91%
+Epoch [3] Batch [130/422] Loss: 0.0328 Acc: 98.93%
+Epoch [3] Batch [140/422] Loss: 0.0678 Acc: 98.93%
+Epoch [3] Batch [150/422] Loss: 0.0431 Acc: 98.89%
+Epoch [3] Batch [160/422] Loss: 0.0499 Acc: 98.86%
+Epoch [3] Batch [170/422] Loss: 0.0416 Acc: 98.86%
+Epoch [3] Batch [180/422] Loss: 0.0088 Acc: 98.84%
+Epoch [3] Batch [190/422] Loss: 0.0308 Acc: 98.86%
+Epoch [3] Batch [200/422] Loss: 0.0117 Acc: 98.88%
+Epoch [3] Batch [210/422] Loss: 0.0399 Acc: 98.89%
+Epoch [3] Batch [220/422] Loss: 0.0076 Acc: 98.91%
+Epoch [3] Batch [230/422] Loss: 0.0290 Acc: 98.91%
+Epoch [3] Batch [240/422] Loss: 0.0232 Acc: 98.90%
+Epoch [3] Batch [250/422] Loss: 0.0505 Acc: 98.90%
+Epoch [3] Batch [260/422] Loss: 0.0503 Acc: 98.89%
+Epoch [3] Batch [270/422] Loss: 0.0446 Acc: 98.87%
+Epoch [3] Batch [280/422] Loss: 0.0505 Acc: 98.84%
+Epoch [3] Batch [290/422] Loss: 0.0310 Acc: 98.84%
+Epoch [3] Batch [300/422] Loss: 0.0400 Acc: 98.85%
+Epoch [3] Batch [310/422] Loss: 0.1765 Acc: 98.85%
+Epoch [3] Batch [320/422] Loss: 0.0360 Acc: 98.85%
+Epoch [3] Batch [330/422] Loss: 0.0711 Acc: 98.85%
+Epoch [3] Batch [340/422] Loss: 0.0656 Acc: 98.84%
+Epoch [3] Batch [350/422] Loss: 0.0229 Acc: 98.84%
+Epoch [3] Batch [360/422] Loss: 0.0049 Acc: 98.85%
+Epoch [3] Batch [370/422] Loss: 0.0076 Acc: 98.85%
+Epoch [3] Batch [380/422] Loss: 0.0545 Acc: 98.83%
+Epoch [3] Batch [390/422] Loss: 0.1057 Acc: 98.79%
+Epoch [3] Batch [400/422] Loss: 0.0388 Acc: 98.76%
+Epoch [3] Batch [410/422] Loss: 0.0640 Acc: 98.75%
+Epoch [3] Batch [420/422] Loss: 0.0243 Acc: 98.75%
+
+======================================================================
+Epoch 3/20
+Train Loss: 0.0411, Train Acc: 98.75%
+Val Loss: 0.0760, Val Acc: 97.62%
+Time: 107.29s
+======================================================================
+
+[BEST] Saved best model -> checkpoints/best_data_1.pth (Val Acc: 97.62%)
+Epoch [4] Batch [0/422] Loss: 0.0493 Acc: 98.44%
+Epoch [4] Batch [10/422] Loss: 0.0316 Acc: 98.79%
+Epoch [4] Batch [20/422] Loss: 0.0149 Acc: 98.81%
+Epoch [4] Batch [30/422] Loss: 0.0401 Acc: 98.56%
+Epoch [4] Batch [40/422] Loss: 0.0257 Acc: 98.46%
+Epoch [4] Batch [50/422] Loss: 0.0148 Acc: 98.54%
+Epoch [4] Batch [60/422] Loss: 0.0269 Acc: 98.59%
+Epoch [4] Batch [70/422] Loss: 0.0425 Acc: 98.64%
+Epoch [4] Batch [80/422] Loss: 0.0537 Acc: 98.65%
+Epoch [4] Batch [90/422] Loss: 0.0053 Acc: 98.73%
+Epoch [4] Batch [100/422] Loss: 0.0403 Acc: 98.79%
+Epoch [4] Batch [110/422] Loss: 0.0420 Acc: 98.80%
+Epoch [4] Batch [120/422] Loss: 0.0743 Acc: 98.82%
+Epoch [4] Batch [130/422] Loss: 0.0130 Acc: 98.80%
+Epoch [4] Batch [140/422] Loss: 0.0536 Acc: 98.80%
+Epoch [4] Batch [150/422] Loss: 0.0331 Acc: 98.83%
+Epoch [4] Batch [160/422] Loss: 0.0319 Acc: 98.84%
+Epoch [4] Batch [170/422] Loss: 0.0034 Acc: 98.85%
+Epoch [4] Batch [180/422] Loss: 0.0062 Acc: 98.85%
+Epoch [4] Batch [190/422] Loss: 0.0203 Acc: 98.86%
+Epoch [4] Batch [200/422] Loss: 0.0319 Acc: 98.87%
+Epoch [4] Batch [210/422] Loss: 0.0105 Acc: 98.87%
+Epoch [4] Batch [220/422] Loss: 0.0099 Acc: 98.87%
+Epoch [4] Batch [230/422] Loss: 0.0275 Acc: 98.87%
+Epoch [4] Batch [240/422] Loss: 0.0032 Acc: 98.88%
+Epoch [4] Batch [250/422] Loss: 0.0310 Acc: 98.87%
+Epoch [4] Batch [260/422] Loss: 0.0472 Acc: 98.84%
+Epoch [4] Batch [270/422] Loss: 0.0266 Acc: 98.85%
+Epoch [4] Batch [280/422] Loss: 0.0047 Acc: 98.87%
+Epoch [4] Batch [290/422] Loss: 0.0190 Acc: 98.87%
+Epoch [4] Batch [300/422] Loss: 0.0144 Acc: 98.87%
+Epoch [4] Batch [310/422] Loss: 0.0285 Acc: 98.86%
+Epoch [4] Batch [320/422] Loss: 0.0832 Acc: 98.88%
+Epoch [4] Batch [330/422] Loss: 0.0423 Acc: 98.89%
+Epoch [4] Batch [340/422] Loss: 0.0334 Acc: 98.89%
+Epoch [4] Batch [350/422] Loss: 0.0306 Acc: 98.89%
+Epoch [4] Batch [360/422] Loss: 0.0487 Acc: 98.90%
+Epoch [4] Batch [370/422] Loss: 0.0281 Acc: 98.89%
+Epoch [4] Batch [380/422] Loss: 0.0115 Acc: 98.91%
+Epoch [4] Batch [390/422] Loss: 0.0043 Acc: 98.91%
+Epoch [4] Batch [400/422] Loss: 0.0075 Acc: 98.91%
+Epoch [4] Batch [410/422] Loss: 0.0288 Acc: 98.92%
+Epoch [4] Batch [420/422] Loss: 0.0438 Acc: 98.93%
+
+======================================================================
+Epoch 4/20
+Train Loss: 0.0328, Train Acc: 98.92%
+Val Loss: 0.0511, Val Acc: 98.40%
+Time: 110.03s
+======================================================================
+
+[BEST] Saved best model -> checkpoints/best_data_1.pth (Val Acc: 98.40%)
+Epoch [5] Batch [0/422] Loss: 0.0327 Acc: 98.44%
+Epoch [5] Batch [10/422] Loss: 0.0043 Acc: 99.29%
+Epoch [5] Batch [20/422] Loss: 0.0175 Acc: 99.44%
+Epoch [5] Batch [30/422] Loss: 0.0075 Acc: 99.34%
+Epoch [5] Batch [40/422] Loss: 0.0137 Acc: 99.31%
+Epoch [5] Batch [50/422] Loss: 0.0232 Acc: 99.30%
+Epoch [5] Batch [60/422] Loss: 0.0133 Acc: 99.37%
+Epoch [5] Batch [70/422] Loss: 0.0053 Acc: 99.36%
+Epoch [5] Batch [80/422] Loss: 0.0222 Acc: 99.33%
+Epoch [5] Batch [90/422] Loss: 0.0074 Acc: 99.31%
+Epoch [5] Batch [100/422] Loss: 0.0068 Acc: 99.29%
+Epoch [5] Batch [110/422] Loss: 0.0123 Acc: 99.25%
+Epoch [5] Batch [120/422] Loss: 0.0024 Acc: 99.24%
+Epoch [5] Batch [130/422] Loss: 0.0460 Acc: 99.22%
+Epoch [5] Batch [140/422] Loss: 0.0087 Acc: 99.21%
+Epoch [5] Batch [150/422] Loss: 0.0343 Acc: 99.23%
+Epoch [5] Batch [160/422] Loss: 0.0439 Acc: 99.23%
+Epoch [5] Batch [170/422] Loss: 0.0071 Acc: 99.24%
+Epoch [5] Batch [180/422] Loss: 0.0058 Acc: 99.24%
+Epoch [5] Batch [190/422] Loss: 0.0540 Acc: 99.24%
+Epoch [5] Batch [200/422] Loss: 0.0147 Acc: 99.25%
+Epoch [5] Batch [210/422] Loss: 0.0078 Acc: 99.28%
+Epoch [5] Batch [220/422] Loss: 0.0152 Acc: 99.29%
+Epoch [5] Batch [230/422] Loss: 0.0016 Acc: 99.28%
+Epoch [5] Batch [240/422] Loss: 0.0041 Acc: 99.29%
+Epoch [5] Batch [250/422] Loss: 0.0263 Acc: 99.29%
+Epoch [5] Batch [260/422] Loss: 0.0097 Acc: 99.31%
+Epoch [5] Batch [270/422] Loss: 0.0278 Acc: 99.30%
+Epoch [5] Batch [280/422] Loss: 0.0067 Acc: 99.29%
+Epoch [5] Batch [290/422] Loss: 0.0146 Acc: 99.29%
+Epoch [5] Batch [300/422] Loss: 0.0558 Acc: 99.29%
+Epoch [5] Batch [310/422] Loss: 0.0426 Acc: 99.27%
+Epoch [5] Batch [320/422] Loss: 0.0494 Acc: 99.28%
+Epoch [5] Batch [330/422] Loss: 0.0260 Acc: 99.28%
+Epoch [5] Batch [340/422] Loss: 0.0375 Acc: 99.29%
+Epoch [5] Batch [350/422] Loss: 0.0504 Acc: 99.27%
+Epoch [5] Batch [360/422] Loss: 0.0047 Acc: 99.28%
+Epoch [5] Batch [370/422] Loss: 0.0206 Acc: 99.27%
+Epoch [5] Batch [380/422] Loss: 0.0056 Acc: 99.27%
+Epoch [5] Batch [390/422] Loss: 0.0325 Acc: 99.26%
+Epoch [5] Batch [400/422] Loss: 0.0027 Acc: 99.26%
+Epoch [5] Batch [410/422] Loss: 0.0564 Acc: 99.25%
+Epoch [5] Batch [420/422] Loss: 0.0155 Acc: 99.25%
+
+======================================================================
+Epoch 5/20
+Train Loss: 0.0236, Train Acc: 99.25%
+Val Loss: 0.0488, Val Acc: 98.52%
+Time: 108.35s
+======================================================================
+
+[BEST] Saved best model -> checkpoints/best_data_1.pth (Val Acc: 98.52%)
+Epoch [6] Batch [0/422] Loss: 0.0097 Acc: 99.22%
+Epoch [6] Batch [10/422] Loss: 0.0077 Acc: 99.36%
+Epoch [6] Batch [20/422] Loss: 0.0079 Acc: 99.63%
+Epoch [6] Batch [30/422] Loss: 0.0081 Acc: 99.62%
+Epoch [6] Batch [40/422] Loss: 0.0074 Acc: 99.68%
+Epoch [6] Batch [50/422] Loss: 0.0255 Acc: 99.66%
+Epoch [6] Batch [60/422] Loss: 0.0187 Acc: 99.63%
+Epoch [6] Batch [70/422] Loss: 0.0059 Acc: 99.66%
+Epoch [6] Batch [80/422] Loss: 0.0014 Acc: 99.65%
+Epoch [6] Batch [90/422] Loss: 0.0133 Acc: 99.61%
+Epoch [6] Batch [100/422] Loss: 0.0183 Acc: 99.61%
+Epoch [6] Batch [110/422] Loss: 0.0205 Acc: 99.60%
+Epoch [6] Batch [120/422] Loss: 0.0035 Acc: 99.59%
+Epoch [6] Batch [130/422] Loss: 0.0377 Acc: 99.58%
+Epoch [6] Batch [140/422] Loss: 0.0066 Acc: 99.56%
+Epoch [6] Batch [150/422] Loss: 0.0174 Acc: 99.54%
+Epoch [6] Batch [160/422] Loss: 0.0066 Acc: 99.54%
+Epoch [6] Batch [170/422] Loss: 0.0361 Acc: 99.52%
+Epoch [6] Batch [180/422] Loss: 0.0156 Acc: 99.51%
+Epoch [6] Batch [190/422] Loss: 0.0019 Acc: 99.50%
+Epoch [6] Batch [200/422] Loss: 0.0151 Acc: 99.49%
+Epoch [6] Batch [210/422] Loss: 0.0189 Acc: 99.50%
+Epoch [6] Batch [220/422] Loss: 0.0297 Acc: 99.50%
+Epoch [6] Batch [230/422] Loss: 0.0093 Acc: 99.50%
+Epoch [6] Batch [240/422] Loss: 0.0183 Acc: 99.48%
+Epoch [6] Batch [250/422] Loss: 0.0195 Acc: 99.47%
+Epoch [6] Batch [260/422] Loss: 0.0086 Acc: 99.47%
+Epoch [6] Batch [270/422] Loss: 0.0150 Acc: 99.48%
+Epoch [6] Batch [280/422] Loss: 0.0317 Acc: 99.47%
+Epoch [6] Batch [290/422] Loss: 0.0324 Acc: 99.48%
+Epoch [6] Batch [300/422] Loss: 0.0417 Acc: 99.48%
+Epoch [6] Batch [310/422] Loss: 0.0180 Acc: 99.48%
+Epoch [6] Batch [320/422] Loss: 0.0044 Acc: 99.47%
+Epoch [6] Batch [330/422] Loss: 0.0756 Acc: 99.47%
+Epoch [6] Batch [340/422] Loss: 0.0577 Acc: 99.45%
+Epoch [6] Batch [350/422] Loss: 0.0054 Acc: 99.45%
+Epoch [6] Batch [360/422] Loss: 0.0144 Acc: 99.45%
+Epoch [6] Batch [370/422] Loss: 0.0130 Acc: 99.45%
+Epoch [6] Batch [380/422] Loss: 0.0066 Acc: 99.45%
+Epoch [6] Batch [390/422] Loss: 0.0216 Acc: 99.45%
+Epoch [6] Batch [400/422] Loss: 0.0259 Acc: 99.45%
+Epoch [6] Batch [410/422] Loss: 0.0054 Acc: 99.44%
+Epoch [6] Batch [420/422] Loss: 0.0013 Acc: 99.45%
+
+======================================================================
+Epoch 6/20
+Train Loss: 0.0169, Train Acc: 99.45%
+Val Loss: 0.0451, Val Acc: 98.60%
+Time: 106.89s
+======================================================================
+
+[BEST] Saved best model -> checkpoints/best_data_1.pth (Val Acc: 98.60%)
+Epoch [7] Batch [0/422] Loss: 0.0205 Acc: 99.22%
+Epoch [7] Batch [10/422] Loss: 0.0071 Acc: 99.64%
+Epoch [7] Batch [20/422] Loss: 0.0098 Acc: 99.67%
+Epoch [7] Batch [30/422] Loss: 0.0017 Acc: 99.65%
+Epoch [7] Batch [40/422] Loss: 0.0050 Acc: 99.70%
+Epoch [7] Batch [50/422] Loss: 0.0023 Acc: 99.62%
+Epoch [7] Batch [60/422] Loss: 0.0029 Acc: 99.62%
+Epoch [7] Batch [70/422] Loss: 0.0069 Acc: 99.65%
+Epoch [7] Batch [80/422] Loss: 0.0040 Acc: 99.64%
+Epoch [7] Batch [90/422] Loss: 0.0085 Acc: 99.67%
+Epoch [7] Batch [100/422] Loss: 0.0137 Acc: 99.68%
+Epoch [7] Batch [110/422] Loss: 0.0041 Acc: 99.68%
+Epoch [7] Batch [120/422] Loss: 0.0032 Acc: 99.68%
+Epoch [7] Batch [130/422] Loss: 0.0092 Acc: 99.69%
+Epoch [7] Batch [140/422] Loss: 0.0024 Acc: 99.71%
+Epoch [7] Batch [150/422] Loss: 0.0078 Acc: 99.72%
+Epoch [7] Batch [160/422] Loss: 0.0079 Acc: 99.73%
+Epoch [7] Batch [170/422] Loss: 0.0075 Acc: 99.73%
+Epoch [7] Batch [180/422] Loss: 0.0106 Acc: 99.72%
+Epoch [7] Batch [190/422] Loss: 0.0130 Acc: 99.72%
+Epoch [7] Batch [200/422] Loss: 0.0019 Acc: 99.72%
+Epoch [7] Batch [210/422] Loss: 0.0017 Acc: 99.73%
+Epoch [7] Batch [220/422] Loss: 0.0156 Acc: 99.72%
+Epoch [7] Batch [230/422] Loss: 0.0139 Acc: 99.70%
+Epoch [7] Batch [240/422] Loss: 0.0240 Acc: 99.70%
+Epoch [7] Batch [250/422] Loss: 0.0224 Acc: 99.69%
+Epoch [7] Batch [260/422] Loss: 0.0330 Acc: 99.69%
+Epoch [7] Batch [270/422] Loss: 0.0058 Acc: 99.67%
+Epoch [7] Batch [280/422] Loss: 0.0051 Acc: 99.67%
+Epoch [7] Batch [290/422] Loss: 0.0380 Acc: 99.66%
+Epoch [7] Batch [300/422] Loss: 0.0057 Acc: 99.66%
+Epoch [7] Batch [310/422] Loss: 0.0391 Acc: 99.66%
+Epoch [7] Batch [320/422] Loss: 0.0061 Acc: 99.67%
+Epoch [7] Batch [330/422] Loss: 0.0262 Acc: 99.67%
+Epoch [7] Batch [340/422] Loss: 0.0025 Acc: 99.67%
+Epoch [7] Batch [350/422] Loss: 0.0245 Acc: 99.65%
+Epoch [7] Batch [360/422] Loss: 0.0106 Acc: 99.64%
+Epoch [7] Batch [370/422] Loss: 0.0061 Acc: 99.63%
+Epoch [7] Batch [380/422] Loss: 0.0109 Acc: 99.62%
+Epoch [7] Batch [390/422] Loss: 0.0185 Acc: 99.62%
+Epoch [7] Batch [400/422] Loss: 0.0429 Acc: 99.62%
+Epoch [7] Batch [410/422] Loss: 0.0030 Acc: 99.63%
+Epoch [7] Batch [420/422] Loss: 0.0627 Acc: 99.62%
+
+======================================================================
+Epoch 7/20
+Train Loss: 0.0133, Train Acc: 99.62%
+Val Loss: 0.0416, Val Acc: 98.75%
+Time: 108.11s
+======================================================================
+
+[BEST] Saved best model -> checkpoints/best_data_1.pth (Val Acc: 98.75%)
+Epoch [8] Batch [0/422] Loss: 0.0024 Acc: 100.00%
+Epoch [8] Batch [10/422] Loss: 0.0039 Acc: 99.86%
+Epoch [8] Batch [20/422] Loss: 0.0218 Acc: 99.70%
+Epoch [8] Batch [30/422] Loss: 0.0160 Acc: 99.72%
+Epoch [8] Batch [40/422] Loss: 0.0266 Acc: 99.73%
+Epoch [8] Batch [50/422] Loss: 0.0178 Acc: 99.69%
+Epoch [8] Batch [60/422] Loss: 0.0020 Acc: 99.74%
+Epoch [8] Batch [70/422] Loss: 0.0258 Acc: 99.72%
+Epoch [8] Batch [80/422] Loss: 0.0102 Acc: 99.74%
+Epoch [8] Batch [90/422] Loss: 0.0137 Acc: 99.74%
+Epoch [8] Batch [100/422] Loss: 0.0014 Acc: 99.73%
+Epoch [8] Batch [110/422] Loss: 0.0030 Acc: 99.73%
+Epoch [8] Batch [120/422] Loss: 0.0055 Acc: 99.75%
+Epoch [8] Batch [130/422] Loss: 0.0023 Acc: 99.76%
+Epoch [8] Batch [140/422] Loss: 0.0025 Acc: 99.77%
+Epoch [8] Batch [150/422] Loss: 0.0065 Acc: 99.77%
+Epoch [8] Batch [160/422] Loss: 0.0015 Acc: 99.78%
+Epoch [8] Batch [170/422] Loss: 0.0270 Acc: 99.79%
+Epoch [8] Batch [180/422] Loss: 0.0153 Acc: 99.77%
+Epoch [8] Batch [190/422] Loss: 0.0173 Acc: 99.77%
+Epoch [8] Batch [200/422] Loss: 0.0153 Acc: 99.76%
+Epoch [8] Batch [210/422] Loss: 0.0052 Acc: 99.77%
+Epoch [8] Batch [220/422] Loss: 0.0055 Acc: 99.77%
+Epoch [8] Batch [230/422] Loss: 0.0042 Acc: 99.77%
+Epoch [8] Batch [240/422] Loss: 0.0036 Acc: 99.77%
+Epoch [8] Batch [250/422] Loss: 0.0075 Acc: 99.78%
+Epoch [8] Batch [260/422] Loss: 0.0090 Acc: 99.78%
+Epoch [8] Batch [270/422] Loss: 0.0014 Acc: 99.79%
+Epoch [8] Batch [280/422] Loss: 0.0149 Acc: 99.79%
+Epoch [8] Batch [290/422] Loss: 0.0044 Acc: 99.78%
+Epoch [8] Batch [300/422] Loss: 0.0082 Acc: 99.78%
+Epoch [8] Batch [310/422] Loss: 0.0053 Acc: 99.78%
+Epoch [8] Batch [320/422] Loss: 0.0052 Acc: 99.79%
+Epoch [8] Batch [330/422] Loss: 0.0035 Acc: 99.79%
+Epoch [8] Batch [340/422] Loss: 0.0069 Acc: 99.78%
+Epoch [8] Batch [350/422] Loss: 0.0026 Acc: 99.78%
+Epoch [8] Batch [360/422] Loss: 0.0098 Acc: 99.78%
+Epoch [8] Batch [370/422] Loss: 0.0087 Acc: 99.78%
+Epoch [8] Batch [380/422] Loss: 0.0128 Acc: 99.78%
+Epoch [8] Batch [390/422] Loss: 0.0037 Acc: 99.78%
+Epoch [8] Batch [400/422] Loss: 0.0017 Acc: 99.78%
+Epoch [8] Batch [410/422] Loss: 0.0061 Acc: 99.78%
+Epoch [8] Batch [420/422] Loss: 0.0178 Acc: 99.78%
+
+======================================================================
+Epoch 8/20
+Train Loss: 0.0082, Train Acc: 99.78%
+Val Loss: 0.0345, Val Acc: 98.98%
+Time: 107.91s
+======================================================================
+
+[BEST] Saved best model -> checkpoints/best_data_1.pth (Val Acc: 98.98%)
+Epoch [9] Batch [0/422] Loss: 0.0124 Acc: 99.22%
+Epoch [9] Batch [10/422] Loss: 0.0012 Acc: 99.64%
+Epoch [9] Batch [20/422] Loss: 0.0019 Acc: 99.78%
+Epoch [9] Batch [30/422] Loss: 0.0225 Acc: 99.72%
+Epoch [9] Batch [40/422] Loss: 0.0138 Acc: 99.71%
+Epoch [9] Batch [50/422] Loss: 0.0041 Acc: 99.75%
+Epoch [9] Batch [60/422] Loss: 0.0055 Acc: 99.77%
+Epoch [9] Batch [70/422] Loss: 0.0008 Acc: 99.80%
+Epoch [9] Batch [80/422] Loss: 0.0024 Acc: 99.82%
+Epoch [9] Batch [90/422] Loss: 0.0151 Acc: 99.83%
+Epoch [9] Batch [100/422] Loss: 0.0115 Acc: 99.83%
+Epoch [9] Batch [110/422] Loss: 0.0051 Acc: 99.83%
+Epoch [9] Batch [120/422] Loss: 0.0014 Acc: 99.84%
+Epoch [9] Batch [130/422] Loss: 0.0010 Acc: 99.85%
+Epoch [9] Batch [140/422] Loss: 0.0010 Acc: 99.85%
+Epoch [9] Batch [150/422] Loss: 0.0009 Acc: 99.86%
+Epoch [9] Batch [160/422] Loss: 0.0018 Acc: 99.86%
+Epoch [9] Batch [170/422] Loss: 0.0018 Acc: 99.87%
+Epoch [9] Batch [180/422] Loss: 0.0028 Acc: 99.88%
+Epoch [9] Batch [190/422] Loss: 0.0020 Acc: 99.88%
+Epoch [9] Batch [200/422] Loss: 0.0005 Acc: 99.89%
+Epoch [9] Batch [210/422] Loss: 0.0027 Acc: 99.89%
+Epoch [9] Batch [220/422] Loss: 0.0097 Acc: 99.89%
+Epoch [9] Batch [230/422] Loss: 0.0081 Acc: 99.90%
+Epoch [9] Batch [240/422] Loss: 0.0013 Acc: 99.90%
+Epoch [9] Batch [250/422] Loss: 0.0008 Acc: 99.89%
+Epoch [9] Batch [260/422] Loss: 0.0005 Acc: 99.90%
+Epoch [9] Batch [270/422] Loss: 0.0039 Acc: 99.90%
+Epoch [9] Batch [280/422] Loss: 0.0170 Acc: 99.89%
+Epoch [9] Batch [290/422] Loss: 0.0102 Acc: 99.90%
+Epoch [9] Batch [300/422] Loss: 0.0010 Acc: 99.90%
+Epoch [9] Batch [310/422] Loss: 0.0017 Acc: 99.90%
+Epoch [9] Batch [320/422] Loss: 0.0015 Acc: 99.90%
+Epoch [9] Batch [330/422] Loss: 0.0047 Acc: 99.90%
+Epoch [9] Batch [340/422] Loss: 0.0015 Acc: 99.90%
+Epoch [9] Batch [350/422] Loss: 0.0019 Acc: 99.90%
+Epoch [9] Batch [360/422] Loss: 0.0018 Acc: 99.90%
+Epoch [9] Batch [370/422] Loss: 0.0053 Acc: 99.90%
+Epoch [9] Batch [380/422] Loss: 0.0027 Acc: 99.90%
+Epoch [9] Batch [390/422] Loss: 0.0005 Acc: 99.91%
+Epoch [9] Batch [400/422] Loss: 0.0027 Acc: 99.91%
+Epoch [9] Batch [410/422] Loss: 0.0090 Acc: 99.91%
+Epoch [9] Batch [420/422] Loss: 0.0012 Acc: 99.90%
+
+======================================================================
+Epoch 9/20
+Train Loss: 0.0047, Train Acc: 99.90%
+Val Loss: 0.0368, Val Acc: 99.07%
+Time: 107.69s
+======================================================================
+
+[BEST] Saved best model -> checkpoints/best_data_1.pth (Val Acc: 99.07%)
+Epoch [10] Batch [0/422] Loss: 0.0016 Acc: 100.00%
+Epoch [10] Batch [10/422] Loss: 0.0038 Acc: 99.93%
+Epoch [10] Batch [20/422] Loss: 0.0025 Acc: 99.96%
+Epoch [10] Batch [30/422] Loss: 0.0031 Acc: 99.95%
+Epoch [10] Batch [40/422] Loss: 0.0015 Acc: 99.94%
+Epoch [10] Batch [50/422] Loss: 0.0015 Acc: 99.95%
+Epoch [10] Batch [60/422] Loss: 0.0013 Acc: 99.95%
+Epoch [10] Batch [70/422] Loss: 0.0046 Acc: 99.93%
+Epoch [10] Batch [80/422] Loss: 0.0007 Acc: 99.94%
+Epoch [10] Batch [90/422] Loss: 0.0130 Acc: 99.94%
+Epoch [10] Batch [100/422] Loss: 0.0005 Acc: 99.95%
+Epoch [10] Batch [110/422] Loss: 0.0020 Acc: 99.94%
+Epoch [10] Batch [120/422] Loss: 0.0037 Acc: 99.95%
+Epoch [10] Batch [130/422] Loss: 0.0034 Acc: 99.95%
+Epoch [10] Batch [140/422] Loss: 0.0019 Acc: 99.96%
+Epoch [10] Batch [150/422] Loss: 0.0066 Acc: 99.95%
+Epoch [10] Batch [160/422] Loss: 0.0011 Acc: 99.96%
+Epoch [10] Batch [170/422] Loss: 0.0006 Acc: 99.96%
+Epoch [10] Batch [180/422] Loss: 0.0012 Acc: 99.96%
+Epoch [10] Batch [190/422] Loss: 0.0076 Acc: 99.96%
+Epoch [10] Batch [200/422] Loss: 0.0024 Acc: 99.96%
+Epoch [10] Batch [210/422] Loss: 0.0024 Acc: 99.96%
+Epoch [10] Batch [220/422] Loss: 0.0016 Acc: 99.96%
+Epoch [10] Batch [230/422] Loss: 0.0059 Acc: 99.96%
+Epoch [10] Batch [240/422] Loss: 0.0008 Acc: 99.96%
+Epoch [10] Batch [250/422] Loss: 0.0033 Acc: 99.96%
+Epoch [10] Batch [260/422] Loss: 0.0020 Acc: 99.96%
+Epoch [10] Batch [270/422] Loss: 0.0013 Acc: 99.97%
+Epoch [10] Batch [280/422] Loss: 0.0006 Acc: 99.97%
+Epoch [10] Batch [290/422] Loss: 0.0008 Acc: 99.97%
+Epoch [10] Batch [300/422] Loss: 0.0020 Acc: 99.97%
+Epoch [10] Batch [310/422] Loss: 0.0036 Acc: 99.97%
+Epoch [10] Batch [320/422] Loss: 0.0052 Acc: 99.96%
+Epoch [10] Batch [330/422] Loss: 0.0007 Acc: 99.96%
+Epoch [10] Batch [340/422] Loss: 0.0015 Acc: 99.97%
+Epoch [10] Batch [350/422] Loss: 0.0012 Acc: 99.97%
+Epoch [10] Batch [360/422] Loss: 0.0008 Acc: 99.97%
+Epoch [10] Batch [370/422] Loss: 0.0006 Acc: 99.97%
+Epoch [10] Batch [380/422] Loss: 0.0014 Acc: 99.97%
+Epoch [10] Batch [390/422] Loss: 0.0010 Acc: 99.97%
+Epoch [10] Batch [400/422] Loss: 0.0005 Acc: 99.97%
+Epoch [10] Batch [410/422] Loss: 0.0047 Acc: 99.97%
+Epoch [10] Batch [420/422] Loss: 0.0016 Acc: 99.97%
+
+======================================================================
+Epoch 10/20
+Train Loss: 0.0027, Train Acc: 99.97%
+Val Loss: 0.0316, Val Acc: 99.18%
+Time: 107.41s
+======================================================================
+
+[BEST] Saved best model -> checkpoints/best_data_1.pth (Val Acc: 99.18%)
+Epoch [11] Batch [0/422] Loss: 0.0005 Acc: 100.00%
+Epoch [11] Batch [10/422] Loss: 0.0006 Acc: 100.00%
+Epoch [11] Batch [20/422] Loss: 0.0007 Acc: 100.00%
+Epoch [11] Batch [30/422] Loss: 0.0012 Acc: 100.00%
+Epoch [11] Batch [40/422] Loss: 0.0008 Acc: 100.00%
+Epoch [11] Batch [50/422] Loss: 0.0006 Acc: 100.00%
+Epoch [11] Batch [60/422] Loss: 0.0021 Acc: 99.99%
+Epoch [11] Batch [70/422] Loss: 0.0004 Acc: 99.99%
+Epoch [11] Batch [80/422] Loss: 0.0007 Acc: 99.99%
+Epoch [11] Batch [90/422] Loss: 0.0016 Acc: 99.99%
+Epoch [11] Batch [100/422] Loss: 0.0004 Acc: 99.98%
+Epoch [11] Batch [110/422] Loss: 0.0008 Acc: 99.99%
+Epoch [11] Batch [120/422] Loss: 0.0010 Acc: 99.99%
+Epoch [11] Batch [130/422] Loss: 0.0031 Acc: 99.99%
+Epoch [11] Batch [140/422] Loss: 0.0010 Acc: 99.99%
+Epoch [11] Batch [150/422] Loss: 0.0045 Acc: 99.99%
+Epoch [11] Batch [160/422] Loss: 0.0012 Acc: 99.99%
+Epoch [11] Batch [170/422] Loss: 0.0010 Acc: 99.99%
+Epoch [11] Batch [180/422] Loss: 0.0006 Acc: 99.99%
+Epoch [11] Batch [190/422] Loss: 0.0039 Acc: 99.99%
+Epoch [11] Batch [200/422] Loss: 0.0048 Acc: 99.99%
+Epoch [11] Batch [210/422] Loss: 0.0007 Acc: 99.99%
+Epoch [11] Batch [220/422] Loss: 0.0009 Acc: 99.98%
+Epoch [11] Batch [230/422] Loss: 0.0009 Acc: 99.98%
+Epoch [11] Batch [240/422] Loss: 0.0011 Acc: 99.98%
+Epoch [11] Batch [250/422] Loss: 0.0006 Acc: 99.98%
+Epoch [11] Batch [260/422] Loss: 0.0093 Acc: 99.98%
+Epoch [11] Batch [270/422] Loss: 0.0021 Acc: 99.98%
+Epoch [11] Batch [280/422] Loss: 0.0036 Acc: 99.98%
+Epoch [11] Batch [290/422] Loss: 0.0031 Acc: 99.98%
+Epoch [11] Batch [300/422] Loss: 0.0048 Acc: 99.98%
+Epoch [11] Batch [310/422] Loss: 0.0004 Acc: 99.98%
+Epoch [11] Batch [320/422] Loss: 0.0024 Acc: 99.98%
+Epoch [11] Batch [330/422] Loss: 0.0004 Acc: 99.98%
+Epoch [11] Batch [340/422] Loss: 0.0007 Acc: 99.98%
+Epoch [11] Batch [350/422] Loss: 0.0006 Acc: 99.98%
+Epoch [11] Batch [360/422] Loss: 0.0003 Acc: 99.98%
+Epoch [11] Batch [370/422] Loss: 0.0006 Acc: 99.98%
+Epoch [11] Batch [380/422] Loss: 0.0004 Acc: 99.98%
+Epoch [11] Batch [390/422] Loss: 0.0002 Acc: 99.98%
+Epoch [11] Batch [400/422] Loss: 0.0017 Acc: 99.98%
+Epoch [11] Batch [410/422] Loss: 0.0015 Acc: 99.98%
+Epoch [11] Batch [420/422] Loss: 0.0018 Acc: 99.99%
+
+======================================================================
+Epoch 11/20
+Train Loss: 0.0016, Train Acc: 99.99%
+Val Loss: 0.0286, Val Acc: 99.25%
+Time: 107.45s
+======================================================================
+
+[BEST] Saved best model -> checkpoints/best_data_1.pth (Val Acc: 99.25%)
+Epoch [12] Batch [0/422] Loss: 0.0023 Acc: 100.00%
+Epoch [12] Batch [10/422] Loss: 0.0004 Acc: 100.00%
+Epoch [12] Batch [20/422] Loss: 0.0004 Acc: 100.00%
+Epoch [12] Batch [30/422] Loss: 0.0007 Acc: 100.00%
+Epoch [12] Batch [40/422] Loss: 0.0023 Acc: 100.00%
+Epoch [12] Batch [50/422] Loss: 0.0009 Acc: 100.00%
+Epoch [12] Batch [60/422] Loss: 0.0010 Acc: 100.00%
+Epoch [12] Batch [70/422] Loss: 0.0005 Acc: 100.00%
+Epoch [12] Batch [80/422] Loss: 0.0003 Acc: 100.00%
+Epoch [12] Batch [90/422] Loss: 0.0019 Acc: 100.00%
+Epoch [12] Batch [100/422] Loss: 0.0008 Acc: 100.00%
+Epoch [12] Batch [110/422] Loss: 0.0002 Acc: 100.00%
+Epoch [12] Batch [120/422] Loss: 0.0004 Acc: 100.00%
+Epoch [12] Batch [130/422] Loss: 0.0023 Acc: 100.00%
+Epoch [12] Batch [140/422] Loss: 0.0019 Acc: 100.00%
+Epoch [12] Batch [150/422] Loss: 0.0006 Acc: 100.00%
+Epoch [12] Batch [160/422] Loss: 0.0006 Acc: 100.00%
+Epoch [12] Batch [170/422] Loss: 0.0006 Acc: 100.00%
+Epoch [12] Batch [180/422] Loss: 0.0009 Acc: 100.00%
+Epoch [12] Batch [190/422] Loss: 0.0017 Acc: 100.00%
+Epoch [12] Batch [200/422] Loss: 0.0005 Acc: 100.00%
+Epoch [12] Batch [210/422] Loss: 0.0008 Acc: 100.00%
+Epoch [12] Batch [220/422] Loss: 0.0006 Acc: 100.00%
+Epoch [12] Batch [230/422] Loss: 0.0005 Acc: 100.00%
+Epoch [12] Batch [240/422] Loss: 0.0006 Acc: 100.00%
+Epoch [12] Batch [250/422] Loss: 0.0007 Acc: 100.00%
+Epoch [12] Batch [260/422] Loss: 0.0005 Acc: 100.00%
+Epoch [12] Batch [270/422] Loss: 0.0006 Acc: 100.00%
+Epoch [12] Batch [280/422] Loss: 0.0006 Acc: 100.00%
+Epoch [12] Batch [290/422] Loss: 0.0009 Acc: 100.00%
+Epoch [12] Batch [300/422] Loss: 0.0005 Acc: 100.00%
+Epoch [12] Batch [310/422] Loss: 0.0015 Acc: 100.00%
+Epoch [12] Batch [320/422] Loss: 0.0013 Acc: 100.00%
+Epoch [12] Batch [330/422] Loss: 0.0015 Acc: 100.00%
+Epoch [12] Batch [340/422] Loss: 0.0003 Acc: 100.00%
+Epoch [12] Batch [350/422] Loss: 0.0002 Acc: 100.00%
+Epoch [12] Batch [360/422] Loss: 0.0004 Acc: 100.00%
+Epoch [12] Batch [370/422] Loss: 0.0003 Acc: 100.00%
+Epoch [12] Batch [380/422] Loss: 0.0010 Acc: 100.00%
+Epoch [12] Batch [390/422] Loss: 0.0025 Acc: 100.00%
+Epoch [12] Batch [400/422] Loss: 0.0017 Acc: 100.00%
+Epoch [12] Batch [410/422] Loss: 0.0005 Acc: 100.00%
+Epoch [12] Batch [420/422] Loss: 0.0005 Acc: 100.00%
+
+======================================================================
+Epoch 12/20
+Train Loss: 0.0011, Train Acc: 100.00%
+Val Loss: 0.0277, Val Acc: 99.35%
+Time: 108.57s
+======================================================================
+
+[BEST] Saved best model -> checkpoints/best_data_1.pth (Val Acc: 99.35%)
+Epoch [13] Batch [0/422] Loss: 0.0020 Acc: 100.00%
+Epoch [13] Batch [10/422] Loss: 0.0003 Acc: 100.00%
+Epoch [13] Batch [20/422] Loss: 0.0005 Acc: 100.00%
+Epoch [13] Batch [30/422] Loss: 0.0015 Acc: 100.00%
+Epoch [13] Batch [40/422] Loss: 0.0005 Acc: 100.00%
+Epoch [13] Batch [50/422] Loss: 0.0004 Acc: 100.00%
+Epoch [13] Batch [60/422] Loss: 0.0010 Acc: 100.00%
+Epoch [13] Batch [70/422] Loss: 0.0004 Acc: 100.00%
+Epoch [13] Batch [80/422] Loss: 0.0005 Acc: 100.00%
+Epoch [13] Batch [90/422] Loss: 0.0005 Acc: 100.00%
+Epoch [13] Batch [100/422] Loss: 0.0015 Acc: 100.00%
+Epoch [13] Batch [110/422] Loss: 0.0008 Acc: 100.00%
+Epoch [13] Batch [120/422] Loss: 0.0004 Acc: 100.00%
+Epoch [13] Batch [130/422] Loss: 0.0007 Acc: 100.00%
+Epoch [13] Batch [140/422] Loss: 0.0016 Acc: 100.00%
+Epoch [13] Batch [150/422] Loss: 0.0004 Acc: 100.00%
+Epoch [13] Batch [160/422] Loss: 0.0007 Acc: 100.00%
+Epoch [13] Batch [170/422] Loss: 0.0006 Acc: 100.00%
+Epoch [13] Batch [180/422] Loss: 0.0009 Acc: 100.00%
+Epoch [13] Batch [190/422] Loss: 0.0006 Acc: 100.00%
+Epoch [13] Batch [200/422] Loss: 0.0005 Acc: 100.00%
+Epoch [13] Batch [210/422] Loss: 0.0046 Acc: 100.00%
+Epoch [13] Batch [220/422] Loss: 0.0004 Acc: 100.00%
+Epoch [13] Batch [230/422] Loss: 0.0006 Acc: 100.00%
+Epoch [13] Batch [240/422] Loss: 0.0003 Acc: 100.00%
+Epoch [13] Batch [250/422] Loss: 0.0007 Acc: 100.00%
+Epoch [13] Batch [260/422] Loss: 0.0004 Acc: 100.00%
+Epoch [13] Batch [270/422] Loss: 0.0002 Acc: 100.00%
+Epoch [13] Batch [280/422] Loss: 0.0007 Acc: 100.00%
+Epoch [13] Batch [290/422] Loss: 0.0010 Acc: 100.00%
+Epoch [13] Batch [300/422] Loss: 0.0006 Acc: 100.00%
+Epoch [13] Batch [310/422] Loss: 0.0026 Acc: 100.00%
+Epoch [13] Batch [320/422] Loss: 0.0003 Acc: 100.00%
+Epoch [13] Batch [330/422] Loss: 0.0003 Acc: 100.00%
+Epoch [13] Batch [340/422] Loss: 0.0004 Acc: 100.00%
+Epoch [13] Batch [350/422] Loss: 0.0013 Acc: 100.00%
+Epoch [13] Batch [360/422] Loss: 0.0004 Acc: 100.00%
+Epoch [13] Batch [370/422] Loss: 0.0011 Acc: 100.00%
+Epoch [13] Batch [380/422] Loss: 0.0005 Acc: 100.00%
+Epoch [13] Batch [390/422] Loss: 0.0075 Acc: 100.00%
+Epoch [13] Batch [400/422] Loss: 0.0007 Acc: 100.00%
+Epoch [13] Batch [410/422] Loss: 0.0011 Acc: 100.00%
+Epoch [13] Batch [420/422] Loss: 0.0007 Acc: 100.00%
+
+======================================================================
+Epoch 13/20
+Train Loss: 0.0009, Train Acc: 100.00%
+Val Loss: 0.0269, Val Acc: 99.30%
+Time: 110.30s
+======================================================================
+
+Epoch [14] Batch [0/422] Loss: 0.0010 Acc: 100.00%
+Epoch [14] Batch [10/422] Loss: 0.0005 Acc: 100.00%
+Epoch [14] Batch [20/422] Loss: 0.0004 Acc: 100.00%
+Epoch [14] Batch [30/422] Loss: 0.0005 Acc: 100.00%
+Epoch [14] Batch [40/422] Loss: 0.0003 Acc: 100.00%
+Epoch [14] Batch [50/422] Loss: 0.0006 Acc: 100.00%
+Epoch [14] Batch [60/422] Loss: 0.0013 Acc: 100.00%
+Epoch [14] Batch [70/422] Loss: 0.0009 Acc: 100.00%
+Epoch [14] Batch [80/422] Loss: 0.0007 Acc: 100.00%
+Epoch [14] Batch [90/422] Loss: 0.0014 Acc: 100.00%
+Epoch [14] Batch [100/422] Loss: 0.0009 Acc: 100.00%
+Epoch [14] Batch [110/422] Loss: 0.0008 Acc: 100.00%
+Epoch [14] Batch [120/422] Loss: 0.0007 Acc: 100.00%
+Epoch [14] Batch [130/422] Loss: 0.0006 Acc: 100.00%
+Epoch [14] Batch [140/422] Loss: 0.0010 Acc: 100.00%
+Epoch [14] Batch [150/422] Loss: 0.0004 Acc: 100.00%
+Epoch [14] Batch [160/422] Loss: 0.0005 Acc: 100.00%
+Epoch [14] Batch [170/422] Loss: 0.0003 Acc: 100.00%
+Epoch [14] Batch [180/422] Loss: 0.0013 Acc: 100.00%
+Epoch [14] Batch [190/422] Loss: 0.0005 Acc: 100.00%
+Epoch [14] Batch [200/422] Loss: 0.0007 Acc: 100.00%
+Epoch [14] Batch [210/422] Loss: 0.0008 Acc: 100.00%
+Epoch [14] Batch [220/422] Loss: 0.0004 Acc: 100.00%
+Epoch [14] Batch [230/422] Loss: 0.0002 Acc: 100.00%
+Epoch [14] Batch [240/422] Loss: 0.0003 Acc: 100.00%
+Epoch [14] Batch [250/422] Loss: 0.0014 Acc: 100.00%
+Epoch [14] Batch [260/422] Loss: 0.0004 Acc: 100.00%
+Epoch [14] Batch [270/422] Loss: 0.0003 Acc: 100.00%
+Epoch [14] Batch [280/422] Loss: 0.0003 Acc: 100.00%
+Epoch [14] Batch [290/422] Loss: 0.0025 Acc: 100.00%
+Epoch [14] Batch [300/422] Loss: 0.0016 Acc: 100.00%
+Epoch [14] Batch [310/422] Loss: 0.0003 Acc: 100.00%
+Epoch [14] Batch [320/422] Loss: 0.0005 Acc: 100.00%
+Epoch [14] Batch [330/422] Loss: 0.0004 Acc: 100.00%
+Epoch [14] Batch [340/422] Loss: 0.0005 Acc: 100.00%
+Epoch [14] Batch [350/422] Loss: 0.0005 Acc: 100.00%
+Epoch [14] Batch [360/422] Loss: 0.0005 Acc: 100.00%
+Epoch [14] Batch [370/422] Loss: 0.0004 Acc: 100.00%
+Epoch [14] Batch [380/422] Loss: 0.0014 Acc: 100.00%
+Epoch [14] Batch [390/422] Loss: 0.0002 Acc: 100.00%
+Epoch [14] Batch [400/422] Loss: 0.0009 Acc: 100.00%
+Epoch [14] Batch [410/422] Loss: 0.0008 Acc: 100.00%
+Epoch [14] Batch [420/422] Loss: 0.0012 Acc: 100.00%
+
+======================================================================
+Epoch 14/20
+Train Loss: 0.0007, Train Acc: 100.00%
+Val Loss: 0.0266, Val Acc: 99.27%
+Time: 110.16s
+======================================================================
+
+Epoch [15] Batch [0/422] Loss: 0.0005 Acc: 100.00%
+Epoch [15] Batch [10/422] Loss: 0.0008 Acc: 100.00%
+Epoch [15] Batch [20/422] Loss: 0.0003 Acc: 100.00%
+Epoch [15] Batch [30/422] Loss: 0.0011 Acc: 100.00%
+Epoch [15] Batch [40/422] Loss: 0.0004 Acc: 100.00%
+Epoch [15] Batch [50/422] Loss: 0.0007 Acc: 100.00%
+Epoch [15] Batch [60/422] Loss: 0.0010 Acc: 100.00%
+Epoch [15] Batch [70/422] Loss: 0.0020 Acc: 100.00%
+Epoch [15] Batch [80/422] Loss: 0.0002 Acc: 100.00%
+Epoch [15] Batch [90/422] Loss: 0.0005 Acc: 100.00%
+Epoch [15] Batch [100/422] Loss: 0.0009 Acc: 100.00%
+Epoch [15] Batch [110/422] Loss: 0.0005 Acc: 100.00%
+Epoch [15] Batch [120/422] Loss: 0.0005 Acc: 100.00%
+Epoch [15] Batch [130/422] Loss: 0.0004 Acc: 100.00%
+Epoch [15] Batch [140/422] Loss: 0.0003 Acc: 100.00%
+Epoch [15] Batch [150/422] Loss: 0.0006 Acc: 100.00%
+Epoch [15] Batch [160/422] Loss: 0.0004 Acc: 100.00%
+Epoch [15] Batch [170/422] Loss: 0.0007 Acc: 100.00%
+Epoch [15] Batch [180/422] Loss: 0.0002 Acc: 100.00%
+Epoch [15] Batch [190/422] Loss: 0.0010 Acc: 100.00%
+Epoch [15] Batch [200/422] Loss: 0.0005 Acc: 100.00%
+Epoch [15] Batch [210/422] Loss: 0.0006 Acc: 100.00%
+Epoch [15] Batch [220/422] Loss: 0.0006 Acc: 100.00%
+Epoch [15] Batch [230/422] Loss: 0.0011 Acc: 100.00%
+Epoch [15] Batch [240/422] Loss: 0.0007 Acc: 100.00%
+Epoch [15] Batch [250/422] Loss: 0.0007 Acc: 100.00%
+Epoch [15] Batch [260/422] Loss: 0.0009 Acc: 100.00%
+Epoch [15] Batch [270/422] Loss: 0.0001 Acc: 100.00%
+Epoch [15] Batch [280/422] Loss: 0.0005 Acc: 100.00%
+Epoch [15] Batch [290/422] Loss: 0.0003 Acc: 100.00%
+Epoch [15] Batch [300/422] Loss: 0.0006 Acc: 100.00%
+Epoch [15] Batch [310/422] Loss: 0.0005 Acc: 100.00%
+Epoch [15] Batch [320/422] Loss: 0.0003 Acc: 100.00%
+Epoch [15] Batch [330/422] Loss: 0.0003 Acc: 100.00%
+Epoch [15] Batch [340/422] Loss: 0.0002 Acc: 100.00%
+Epoch [15] Batch [350/422] Loss: 0.0010 Acc: 100.00%
+Epoch [15] Batch [360/422] Loss: 0.0004 Acc: 100.00%
+Epoch [15] Batch [370/422] Loss: 0.0006 Acc: 100.00%
+Epoch [15] Batch [380/422] Loss: 0.0005 Acc: 100.00%
+Epoch [15] Batch [390/422] Loss: 0.0005 Acc: 100.00%
+Epoch [15] Batch [400/422] Loss: 0.0014 Acc: 100.00%
+Epoch [15] Batch [410/422] Loss: 0.0005 Acc: 100.00%
+Epoch [15] Batch [420/422] Loss: 0.0007 Acc: 100.00%
+
+======================================================================
+Epoch 15/20
+Train Loss: 0.0006, Train Acc: 100.00%
+Val Loss: 0.0260, Val Acc: 99.35%
+Time: 109.87s
+======================================================================
+
+Epoch [16] Batch [0/422] Loss: 0.0002 Acc: 100.00%
+Epoch [16] Batch [10/422] Loss: 0.0008 Acc: 100.00%
+Epoch [16] Batch [20/422] Loss: 0.0003 Acc: 100.00%
+Epoch [16] Batch [30/422] Loss: 0.0002 Acc: 100.00%
+Epoch [16] Batch [40/422] Loss: 0.0005 Acc: 100.00%
+Epoch [16] Batch [50/422] Loss: 0.0003 Acc: 100.00%
+Epoch [16] Batch [60/422] Loss: 0.0007 Acc: 100.00%
+Epoch [16] Batch [70/422] Loss: 0.0003 Acc: 100.00%
+Epoch [16] Batch [80/422] Loss: 0.0003 Acc: 100.00%
+Epoch [16] Batch [90/422] Loss: 0.0014 Acc: 100.00%
+Epoch [16] Batch [100/422] Loss: 0.0008 Acc: 100.00%
+Epoch [16] Batch [110/422] Loss: 0.0005 Acc: 100.00%
+Epoch [16] Batch [120/422] Loss: 0.0003 Acc: 100.00%
+Epoch [16] Batch [130/422] Loss: 0.0003 Acc: 100.00%
+Epoch [16] Batch [140/422] Loss: 0.0007 Acc: 100.00%
+Epoch [16] Batch [150/422] Loss: 0.0004 Acc: 100.00%
+Epoch [16] Batch [160/422] Loss: 0.0002 Acc: 100.00%
+Epoch [16] Batch [170/422] Loss: 0.0001 Acc: 100.00%
+Epoch [16] Batch [180/422] Loss: 0.0002 Acc: 100.00%
+Epoch [16] Batch [190/422] Loss: 0.0019 Acc: 100.00%
+Epoch [16] Batch [200/422] Loss: 0.0004 Acc: 100.00%
+Epoch [16] Batch [210/422] Loss: 0.0004 Acc: 100.00%
+Epoch [16] Batch [220/422] Loss: 0.0005 Acc: 100.00%
+Epoch [16] Batch [230/422] Loss: 0.0010 Acc: 100.00%
+Epoch [16] Batch [240/422] Loss: 0.0005 Acc: 100.00%
+Epoch [16] Batch [250/422] Loss: 0.0004 Acc: 100.00%
+Epoch [16] Batch [260/422] Loss: 0.0005 Acc: 100.00%
+Epoch [16] Batch [270/422] Loss: 0.0005 Acc: 100.00%
+Epoch [16] Batch [280/422] Loss: 0.0004 Acc: 100.00%
+Epoch [16] Batch [290/422] Loss: 0.0002 Acc: 100.00%
+Epoch [16] Batch [300/422] Loss: 0.0006 Acc: 100.00%
+Epoch [16] Batch [310/422] Loss: 0.0005 Acc: 100.00%
+Epoch [16] Batch [320/422] Loss: 0.0006 Acc: 100.00%
+Epoch [16] Batch [330/422] Loss: 0.0004 Acc: 100.00%
+Epoch [16] Batch [340/422] Loss: 0.0005 Acc: 100.00%
+Epoch [16] Batch [350/422] Loss: 0.0008 Acc: 100.00%
+Epoch [16] Batch [360/422] Loss: 0.0009 Acc: 100.00%
+Epoch [16] Batch [370/422] Loss: 0.0005 Acc: 100.00%
+Epoch [16] Batch [380/422] Loss: 0.0004 Acc: 100.00%
+Epoch [16] Batch [390/422] Loss: 0.0004 Acc: 100.00%
+Epoch [16] Batch [400/422] Loss: 0.0008 Acc: 100.00%
+Epoch [16] Batch [410/422] Loss: 0.0010 Acc: 100.00%
+Epoch [16] Batch [420/422] Loss: 0.0011 Acc: 100.00%
+
+======================================================================
+Epoch 16/20
+Train Loss: 0.0006, Train Acc: 100.00%
+Val Loss: 0.0263, Val Acc: 99.33%
+Time: 109.23s
+======================================================================
+
+Epoch [17] Batch [0/422] Loss: 0.0012 Acc: 100.00%
+Epoch [17] Batch [10/422] Loss: 0.0002 Acc: 100.00%
+Epoch [17] Batch [20/422] Loss: 0.0004 Acc: 100.00%
+Epoch [17] Batch [30/422] Loss: 0.0003 Acc: 100.00%
+Epoch [17] Batch [40/422] Loss: 0.0003 Acc: 100.00%
+Epoch [17] Batch [50/422] Loss: 0.0003 Acc: 100.00%
+Epoch [17] Batch [60/422] Loss: 0.0007 Acc: 100.00%
+Epoch [17] Batch [70/422] Loss: 0.0010 Acc: 100.00%
+Epoch [17] Batch [80/422] Loss: 0.0004 Acc: 100.00%
+Epoch [17] Batch [90/422] Loss: 0.0006 Acc: 100.00%
+Epoch [17] Batch [100/422] Loss: 0.0001 Acc: 100.00%
+Epoch [17] Batch [110/422] Loss: 0.0004 Acc: 100.00%
+Epoch [17] Batch [120/422] Loss: 0.0005 Acc: 100.00%
+Epoch [17] Batch [130/422] Loss: 0.0005 Acc: 100.00%
+Epoch [17] Batch [140/422] Loss: 0.0006 Acc: 100.00%
+Epoch [17] Batch [150/422] Loss: 0.0006 Acc: 100.00%
+Epoch [17] Batch [160/422] Loss: 0.0013 Acc: 100.00%
+Epoch [17] Batch [170/422] Loss: 0.0003 Acc: 100.00%
+Epoch [17] Batch [180/422] Loss: 0.0004 Acc: 100.00%
+Epoch [17] Batch [190/422] Loss: 0.0046 Acc: 100.00%
+Epoch [17] Batch [200/422] Loss: 0.0002 Acc: 100.00%
+Epoch [17] Batch [210/422] Loss: 0.0008 Acc: 100.00%
+Epoch [17] Batch [220/422] Loss: 0.0009 Acc: 100.00%
+Epoch [17] Batch [230/422] Loss: 0.0006 Acc: 100.00%
+Epoch [17] Batch [240/422] Loss: 0.0005 Acc: 100.00%
+Epoch [17] Batch [250/422] Loss: 0.0002 Acc: 100.00%
+Epoch [17] Batch [260/422] Loss: 0.0004 Acc: 100.00%
+Epoch [17] Batch [270/422] Loss: 0.0005 Acc: 100.00%
+Epoch [17] Batch [280/422] Loss: 0.0007 Acc: 100.00%
+Epoch [17] Batch [290/422] Loss: 0.0005 Acc: 100.00%
+Epoch [17] Batch [300/422] Loss: 0.0010 Acc: 100.00%
+Epoch [17] Batch [310/422] Loss: 0.0007 Acc: 100.00%
+Epoch [17] Batch [320/422] Loss: 0.0004 Acc: 100.00%
+Epoch [17] Batch [330/422] Loss: 0.0006 Acc: 100.00%
+Epoch [17] Batch [340/422] Loss: 0.0004 Acc: 100.00%
+Epoch [17] Batch [350/422] Loss: 0.0007 Acc: 100.00%
+Epoch [17] Batch [360/422] Loss: 0.0003 Acc: 100.00%
+Epoch [17] Batch [370/422] Loss: 0.0010 Acc: 100.00%
+Epoch [17] Batch [380/422] Loss: 0.0004 Acc: 100.00%
+Epoch [17] Batch [390/422] Loss: 0.0008 Acc: 100.00%
+Epoch [17] Batch [400/422] Loss: 0.0003 Acc: 100.00%
+Epoch [17] Batch [410/422] Loss: 0.0006 Acc: 100.00%
+Epoch [17] Batch [420/422] Loss: 0.0007 Acc: 100.00%
+
+======================================================================
+Epoch 17/20
+Train Loss: 0.0006, Train Acc: 100.00%
+Val Loss: 0.0260, Val Acc: 99.35%
+Time: 109.54s
+======================================================================
+
+Epoch [18] Batch [0/422] Loss: 0.0004 Acc: 100.00%
+Epoch [18] Batch [10/422] Loss: 0.0003 Acc: 100.00%
+Epoch [18] Batch [20/422] Loss: 0.0018 Acc: 100.00%
+Epoch [18] Batch [30/422] Loss: 0.0003 Acc: 100.00%
+Epoch [18] Batch [40/422] Loss: 0.0008 Acc: 100.00%
+Epoch [18] Batch [50/422] Loss: 0.0005 Acc: 100.00%
+Epoch [18] Batch [60/422] Loss: 0.0009 Acc: 100.00%
+Epoch [18] Batch [70/422] Loss: 0.0003 Acc: 100.00%
+Epoch [18] Batch [80/422] Loss: 0.0003 Acc: 100.00%
+Epoch [18] Batch [90/422] Loss: 0.0012 Acc: 100.00%
+Epoch [18] Batch [100/422] Loss: 0.0008 Acc: 100.00%
+Epoch [18] Batch [110/422] Loss: 0.0002 Acc: 100.00%
+Epoch [18] Batch [120/422] Loss: 0.0006 Acc: 100.00%
+Epoch [18] Batch [130/422] Loss: 0.0004 Acc: 100.00%
+Epoch [18] Batch [140/422] Loss: 0.0007 Acc: 100.00%
+Epoch [18] Batch [150/422] Loss: 0.0004 Acc: 100.00%
+Epoch [18] Batch [160/422] Loss: 0.0004 Acc: 100.00%
+Epoch [18] Batch [170/422] Loss: 0.0011 Acc: 100.00%
+Epoch [18] Batch [180/422] Loss: 0.0008 Acc: 100.00%
+Epoch [18] Batch [190/422] Loss: 0.0006 Acc: 100.00%
+Epoch [18] Batch [200/422] Loss: 0.0006 Acc: 100.00%
+Epoch [18] Batch [210/422] Loss: 0.0004 Acc: 100.00%
+Epoch [18] Batch [220/422] Loss: 0.0003 Acc: 100.00%
+Epoch [18] Batch [230/422] Loss: 0.0005 Acc: 100.00%
+Epoch [18] Batch [240/422] Loss: 0.0006 Acc: 100.00%
+Epoch [18] Batch [250/422] Loss: 0.0005 Acc: 100.00%
+Epoch [18] Batch [260/422] Loss: 0.0003 Acc: 100.00%
+Epoch [18] Batch [270/422] Loss: 0.0003 Acc: 100.00%
+Epoch [18] Batch [280/422] Loss: 0.0009 Acc: 100.00%
+Epoch [18] Batch [290/422] Loss: 0.0010 Acc: 100.00%
+Epoch [18] Batch [300/422] Loss: 0.0003 Acc: 100.00%
+Epoch [18] Batch [310/422] Loss: 0.0007 Acc: 100.00%
+Epoch [18] Batch [320/422] Loss: 0.0006 Acc: 100.00%
+Epoch [18] Batch [330/422] Loss: 0.0015 Acc: 100.00%
+Epoch [18] Batch [340/422] Loss: 0.0004 Acc: 100.00%
+Epoch [18] Batch [350/422] Loss: 0.0004 Acc: 100.00%
+Epoch [18] Batch [360/422] Loss: 0.0002 Acc: 100.00%
+Epoch [18] Batch [370/422] Loss: 0.0005 Acc: 100.00%
+Epoch [18] Batch [380/422] Loss: 0.0013 Acc: 100.00%
+Epoch [18] Batch [390/422] Loss: 0.0003 Acc: 100.00%
+Epoch [18] Batch [400/422] Loss: 0.0027 Acc: 100.00%
+Epoch [18] Batch [410/422] Loss: 0.0002 Acc: 100.00%
+Epoch [18] Batch [420/422] Loss: 0.0005 Acc: 100.00%
+
+======================================================================
+Epoch 18/20
+Train Loss: 0.0006, Train Acc: 100.00%
+Val Loss: 0.0260, Val Acc: 99.32%
+Time: 109.05s
+======================================================================
+
+Epoch [19] Batch [0/422] Loss: 0.0004 Acc: 100.00%
+Epoch [19] Batch [10/422] Loss: 0.0005 Acc: 100.00%
+Epoch [19] Batch [20/422] Loss: 0.0003 Acc: 100.00%
+Epoch [19] Batch [30/422] Loss: 0.0004 Acc: 100.00%
+Epoch [19] Batch [40/422] Loss: 0.0005 Acc: 100.00%
+Epoch [19] Batch [50/422] Loss: 0.0005 Acc: 100.00%
+Epoch [19] Batch [60/422] Loss: 0.0010 Acc: 100.00%
+Epoch [19] Batch [70/422] Loss: 0.0004 Acc: 100.00%
+Epoch [19] Batch [80/422] Loss: 0.0004 Acc: 100.00%
+Epoch [19] Batch [90/422] Loss: 0.0004 Acc: 100.00%
+Epoch [19] Batch [100/422] Loss: 0.0004 Acc: 100.00%
+Epoch [19] Batch [110/422] Loss: 0.0004 Acc: 100.00%
+Epoch [19] Batch [120/422] Loss: 0.0007 Acc: 100.00%
+Epoch [19] Batch [130/422] Loss: 0.0006 Acc: 100.00%
+Epoch [19] Batch [140/422] Loss: 0.0006 Acc: 100.00%
+Epoch [19] Batch [150/422] Loss: 0.0006 Acc: 100.00%
+Epoch [19] Batch [160/422] Loss: 0.0001 Acc: 100.00%
+Epoch [19] Batch [170/422] Loss: 0.0007 Acc: 100.00%
+Epoch [19] Batch [180/422] Loss: 0.0005 Acc: 100.00%
+Epoch [19] Batch [190/422] Loss: 0.0006 Acc: 100.00%
+Epoch [19] Batch [200/422] Loss: 0.0002 Acc: 100.00%
+Epoch [19] Batch [210/422] Loss: 0.0009 Acc: 100.00%
+Epoch [19] Batch [220/422] Loss: 0.0003 Acc: 100.00%
+Epoch [19] Batch [230/422] Loss: 0.0005 Acc: 100.00%
+Epoch [19] Batch [240/422] Loss: 0.0005 Acc: 100.00%
+Epoch [19] Batch [250/422] Loss: 0.0005 Acc: 100.00%
+Epoch [19] Batch [260/422] Loss: 0.0005 Acc: 100.00%
+Epoch [19] Batch [270/422] Loss: 0.0002 Acc: 100.00%
+Epoch [19] Batch [280/422] Loss: 0.0011 Acc: 100.00%
+Epoch [19] Batch [290/422] Loss: 0.0004 Acc: 100.00%
+Epoch [19] Batch [300/422] Loss: 0.0005 Acc: 100.00%
+Epoch [19] Batch [310/422] Loss: 0.0013 Acc: 100.00%
+Epoch [19] Batch [320/422] Loss: 0.0003 Acc: 100.00%
+Epoch [19] Batch [330/422] Loss: 0.0007 Acc: 100.00%
+Epoch [19] Batch [340/422] Loss: 0.0004 Acc: 100.00%
+Epoch [19] Batch [350/422] Loss: 0.0006 Acc: 100.00%
+Epoch [19] Batch [360/422] Loss: 0.0006 Acc: 100.00%
+Epoch [19] Batch [370/422] Loss: 0.0009 Acc: 100.00%
+Epoch [19] Batch [380/422] Loss: 0.0005 Acc: 100.00%
+Epoch [19] Batch [390/422] Loss: 0.0003 Acc: 100.00%
+Epoch [19] Batch [400/422] Loss: 0.0005 Acc: 100.00%
+Epoch [19] Batch [410/422] Loss: 0.0004 Acc: 100.00%
+Epoch [19] Batch [420/422] Loss: 0.0003 Acc: 100.00%
+
+======================================================================
+Epoch 19/20
+Train Loss: 0.0006, Train Acc: 100.00%
+Val Loss: 0.0257, Val Acc: 99.37%
+Time: 108.97s
+======================================================================
+
+[BEST] Saved best model -> checkpoints/best_data_1.pth (Val Acc: 99.37%)
+Epoch [20] Batch [0/422] Loss: 0.0003 Acc: 100.00%
+Epoch [20] Batch [10/422] Loss: 0.0004 Acc: 100.00%
+Epoch [20] Batch [20/422] Loss: 0.0007 Acc: 100.00%
+Epoch [20] Batch [30/422] Loss: 0.0005 Acc: 100.00%
+Epoch [20] Batch [40/422] Loss: 0.0022 Acc: 100.00%
+Epoch [20] Batch [50/422] Loss: 0.0007 Acc: 100.00%
+Epoch [20] Batch [60/422] Loss: 0.0003 Acc: 100.00%
+Epoch [20] Batch [70/422] Loss: 0.0008 Acc: 100.00%
+Epoch [20] Batch [80/422] Loss: 0.0002 Acc: 100.00%
+Epoch [20] Batch [90/422] Loss: 0.0004 Acc: 100.00%
+Epoch [20] Batch [100/422] Loss: 0.0004 Acc: 100.00%
+Epoch [20] Batch [110/422] Loss: 0.0004 Acc: 100.00%
+Epoch [20] Batch [120/422] Loss: 0.0005 Acc: 100.00%
+Epoch [20] Batch [130/422] Loss: 0.0002 Acc: 100.00%
+Epoch [20] Batch [140/422] Loss: 0.0004 Acc: 100.00%
+Epoch [20] Batch [150/422] Loss: 0.0006 Acc: 100.00%
+Epoch [20] Batch [160/422] Loss: 0.0004 Acc: 100.00%
+Epoch [20] Batch [170/422] Loss: 0.0010 Acc: 100.00%
+Epoch [20] Batch [180/422] Loss: 0.0010 Acc: 100.00%
+Epoch [20] Batch [190/422] Loss: 0.0003 Acc: 100.00%
+Epoch [20] Batch [200/422] Loss: 0.0004 Acc: 100.00%
+Epoch [20] Batch [210/422] Loss: 0.0008 Acc: 100.00%
+Epoch [20] Batch [220/422] Loss: 0.0009 Acc: 100.00%
+Epoch [20] Batch [230/422] Loss: 0.0004 Acc: 100.00%
+Epoch [20] Batch [240/422] Loss: 0.0011 Acc: 100.00%
+Epoch [20] Batch [250/422] Loss: 0.0007 Acc: 100.00%
+Epoch [20] Batch [260/422] Loss: 0.0007 Acc: 100.00%
+Epoch [20] Batch [270/422] Loss: 0.0007 Acc: 100.00%
+Epoch [20] Batch [280/422] Loss: 0.0002 Acc: 100.00%
+Epoch [20] Batch [290/422] Loss: 0.0008 Acc: 100.00%
+Epoch [20] Batch [300/422] Loss: 0.0005 Acc: 100.00%
+Epoch [20] Batch [310/422] Loss: 0.0007 Acc: 100.00%
+Epoch [20] Batch [320/422] Loss: 0.0005 Acc: 100.00%
+Epoch [20] Batch [330/422] Loss: 0.0008 Acc: 100.00%
+Epoch [20] Batch [340/422] Loss: 0.0007 Acc: 100.00%
+Epoch [20] Batch [350/422] Loss: 0.0004 Acc: 100.00%
+Epoch [20] Batch [360/422] Loss: 0.0004 Acc: 100.00%
+Epoch [20] Batch [370/422] Loss: 0.0007 Acc: 100.00%
+Epoch [20] Batch [380/422] Loss: 0.0002 Acc: 100.00%
+Epoch [20] Batch [390/422] Loss: 0.0008 Acc: 100.00%
+Epoch [20] Batch [400/422] Loss: 0.0007 Acc: 100.00%
+Epoch [20] Batch [410/422] Loss: 0.0002 Acc: 100.00%
+Epoch [20] Batch [420/422] Loss: 0.0005 Acc: 100.00%
+
+======================================================================
+Epoch 20/20
+Train Loss: 0.0006, Train Acc: 100.00%
+Val Loss: 0.0260, Val Acc: 99.33%
+Time: 109.98s
+======================================================================
+
+======================================================================
+Training Complete!
+Best Validation Accuracy: 99.37%
+======================================================================
