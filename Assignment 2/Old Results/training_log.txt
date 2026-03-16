@@ -1,0 +1,616 @@
+PS C:\Users\khand\Downloads\GNR-Assignment-2> make all
+.venv/Scripts/python.exe main.py --scenario all --data-dir ./train_data --results-dir ./results --seed 42 --batch-size 32 --epochs 30 --epochs-few 20 --models convnext_tiny inception_v3 densenet121
+Device : cuda
+GPU    : NVIDIA GeForce RTX 4070 Laptop GPU
+VRAM   : 8.6 GB
+Seed   : 42
+Data   : ./train_data
+Results: ./results
+Models : ['convnext_tiny', 'inception_v3', 'densenet121']
+Scenarios: [1, 2, 3, 4, 5]
+
+[data] Split already exists at ./results\_split
+
+======================================================================
+SCENARIO 1: LINEAR PROBE TRANSFER
+======================================================================
+
+>>> convnext_tiny
+
+=======================================================
+  convnext_tiny
+  Input size      : 224x224
+  Total params    :   27,843,198
+  Trainable params:       24,606
+  Frozen params   :   27,818,592
+  MACs            : 4.48 GMac
+  FLOPs (approx)  : 8.96 GFLOPs
+=======================================================
+  [LP-convnext_tiny] Ep  1/30 | TrL 0.9377 TrA 0.7549 | VaL 0.4639 VaA 0.8701
+  [LP-convnext_tiny] Ep  5/30 | TrL 0.2001 TrA 0.9408 | VaL 0.2719 VaA 0.9149
+  [LP-convnext_tiny] Ep 10/30 | TrL 0.1281 TrA 0.9629 | VaL 0.2500 VaA 0.9235
+  [LP-convnext_tiny] Ep 15/30 | TrL 0.0979 TrA 0.9741 | VaL 0.2290 VaA 0.9250
+  [LP-convnext_tiny] Ep 20/30 | TrL 0.0769 TrA 0.9806 | VaL 0.2272 VaA 0.9293
+  [LP-convnext_tiny] Ep 25/30 | TrL 0.0729 TrA 0.9822 | VaL 0.2071 VaA 0.9365
+  [LP-convnext_tiny] Ep 30/30 | TrL 0.0722 TrA 0.9839 | VaL 0.2115 VaA 0.9358
+  [LP-convnext_tiny] Done 40.2m | Best Val 0.9365
+    -> saved ./results\scenario1\convnext_tiny_curves.png
+    -> saved ./results\scenario1\convnext_tiny_cm.png
+    Computing PCA ...
+    -> saved ./results\scenario1\convnext_tiny_pca.png
+    Computing TSNE ...
+    -> saved ./results\scenario1\convnext_tiny_tsne.png
+    Computing UMAP ...
+    -> saved ./results\scenario1\convnext_tiny_umap.png
+
+>>> inception_v3
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+=======================================================
+  inception_v3
+  Input size      : 299x299
+  Total params    :   21,847,038
+  Trainable params:       61,470
+  Frozen params   :   21,785,568
+  MACs            : 5.74 GMac
+  FLOPs (approx)  : 11.47 GFLOPs
+=======================================================
+  [LP-inception_v3] Ep  1/30 | TrL 2.5686 TrA 0.3189 | VaL 1.7598 VaA 0.5152
+  [LP-inception_v3] Ep  5/30 | TrL 0.6932 TrA 0.7988 | VaL 0.7594 VaA 0.7720
+  [LP-inception_v3] Ep 10/30 | TrL 0.4892 TrA 0.8504 | VaL 0.5808 VaA 0.8283
+  [LP-inception_v3] Ep 15/30 | TrL 0.3989 TrA 0.8839 | VaL 0.5212 VaA 0.8478
+  [LP-inception_v3] Ep 20/30 | TrL 0.3445 TrA 0.8987 | VaL 0.5149 VaA 0.8449
+  [LP-inception_v3] Ep 25/30 | TrL 0.3323 TrA 0.8976 | VaL 0.5098 VaA 0.8470
+  [LP-inception_v3] Ep 30/30 | TrL 0.3087 TrA 0.9110 | VaL 0.4962 VaA 0.8506
+  [LP-inception_v3] Done 45.1m | Best Val 0.8571
+    -> saved ./results\scenario1\inception_v3_curves.png
+    -> saved ./results\scenario1\inception_v3_cm.png
+    Computing PCA ...
+    -> saved ./results\scenario1\inception_v3_pca.png
+    Computing TSNE ...
+    -> saved ./results\scenario1\inception_v3_tsne.png
+    Computing UMAP ...
+    -> saved ./results\scenario1\inception_v3_umap.png
+
+>>> densenet121
+
+=======================================================
+  densenet121
+  Input size      : 224x224
+  Total params    :    6,984,606
+  Trainable params:       30,750
+  Frozen params   :    6,953,856
+  MACs            : 2.87 GMac
+  FLOPs (approx)  : 5.74 GFLOPs
+=======================================================
+  [LP-densenet121] Ep  1/30 | TrL 1.6161 TrA 0.6116 | VaL 0.8229 VaA 0.8023
+  [LP-densenet121] Ep  5/30 | TrL 0.4205 TrA 0.8912 | VaL 0.4213 VaA 0.8810
+  [LP-densenet121] Ep 10/30 | TrL 0.2887 TrA 0.9172 | VaL 0.3536 VaA 0.8961
+  [LP-densenet121] Ep 15/30 | TrL 0.2359 TrA 0.9335 | VaL 0.3248 VaA 0.9004
+  [LP-densenet121] Ep 20/30 | TrL 0.2043 TrA 0.9461 | VaL 0.3268 VaA 0.9069
+  [LP-densenet121] Ep 25/30 | TrL 0.1876 TrA 0.9518 | VaL 0.3105 VaA 0.9055
+  [LP-densenet121] Ep 30/30 | TrL 0.1883 TrA 0.9504 | VaL 0.3123 VaA 0.9098
+  [LP-densenet121] Done 45.5m | Best Val 0.9098
+    -> saved ./results\scenario1\densenet121_curves.png
+    -> saved ./results\scenario1\densenet121_cm.png
+    Computing PCA ...
+    -> saved ./results\scenario1\densenet121_pca.png
+    Computing TSNE ...
+    -> saved ./results\scenario1\densenet121_tsne.png
+    Computing UMAP ...
+    -> saved ./results\scenario1\densenet121_umap.png
+
+-------------------------------------------------------
+SCENARIO 1 SUMMARY
+Model                  Best Val Acc Time (min)
+convnext_tiny                0.9365       40.2
+inception_v3                 0.8571       45.1
+densenet121                  0.9098       45.5
+
+Results saved to ./results\scenario1
+[data] Split already exists at ./results\_split
+
+======================================================================
+SCENARIO 2: FINE-TUNING STRATEGIES
+======================================================================
+
+>>> convnext_tiny / linear_probe
+
+=======================================================
+  convnext_tiny
+  Input size      : 224x224
+  Total params    :   27,843,198
+  Trainable params:   27,843,198
+  Frozen params   :            0
+  MACs            : 4.48 GMac
+  FLOPs (approx)  : 8.96 GFLOPs
+=======================================================
+  Trainable: 24,606/27,843,198 (0.1%)
+  Ep  1/30 | TrA 0.7549 | VaA 0.8701
+  Ep 10/30 | TrA 0.9629 | VaA 0.9235
+  Ep 20/30 | TrA 0.9806 | VaA 0.9293
+  Ep 30/30 | TrA 0.9839 | VaA 0.9358
+  Best Val: 0.9365 | 45.5m
+    -> saved ./results\scenario2\convnext_tiny_linear_probe_grads.png
+
+>>> convnext_tiny / last_block
+  [model] Unfroze last block: stage3 (15,470,592 params)
+  Trainable: 15,495,198/27,843,198 (55.7%)
+  Ep  1/30 | TrA 0.7862 | VaA 0.9286
+  Ep 10/30 | TrA 0.9975 | VaA 0.9589
+  Ep 20/30 | TrA 0.9996 | VaA 0.9639
+  Ep 30/30 | TrA 0.9998 | VaA 0.9654
+  Best Val: 0.9683 | 46.7m
+    -> saved ./results\scenario2\convnext_tiny_last_block_grads.png
+
+>>> convnext_tiny / full_finetune
+  Trainable: 27,843,198/27,843,198 (100.0%)
+  Ep  1/30 | TrA 0.7439 | VaA 0.9048
+  Ep 10/30 | TrA 0.9856 | VaA 0.9524
+  Ep 20/30 | TrA 1.0000 | VaA 0.9762
+  Ep 30/30 | TrA 1.0000 | VaA 0.9769
+  Best Val: 0.9776 | 53.6m
+    -> saved ./results\scenario2\convnext_tiny_full_finetune_grads.png
+
+>>> convnext_tiny / selective_20pct
+    -> saved ./results\scenario2\convnext_tiny_sensitivity.png
+  [model] Auto-selected layers: ['stem', 'stage0', 'stage1']
+  Trainable: 1,259,646/27,843,198 (4.5%)
+  Ep  1/30 | TrA 0.4156 | VaA 0.7063
+  Ep 10/30 | TrA 0.9809 | VaA 0.9293
+  Ep 20/30 | TrA 0.9995 | VaA 0.9466
+  Ep 30/30 | TrA 0.9995 | VaA 0.9481
+  Best Val: 0.9538 | 49.5m
+    -> saved ./results\scenario2\convnext_tiny_selective_20pct_grads.png
+
+>>> inception_v3 / linear_probe
+
+=======================================================
+  inception_v3
+  Input size      : 299x299
+  Total params    :   21,847,038
+  Trainable params:   21,847,038
+  Frozen params   :            0
+  MACs            : 5.74 GMac
+  FLOPs (approx)  : 11.47 GFLOPs
+=======================================================
+  Trainable: 61,470/21,847,038 (0.3%)
+  Ep  1/30 | TrA 0.3189 | VaA 0.5152
+  Ep 10/30 | TrA 0.8504 | VaA 0.8283
+  Ep 20/30 | TrA 0.8987 | VaA 0.8449
+  Ep 30/30 | TrA 0.9110 | VaA 0.8506
+  Best Val: 0.8571 | 48.7m
+    -> saved ./results\scenario2\inception_v3_linear_probe_grads.png
+
+>>> inception_v3 / last_block
+  [model] Unfroze last block: Mixed_7c (6,076,800 params)
+  Trainable: 6,138,270/21,847,038 (28.1%)
+  Ep  1/30 | TrA 0.7020 | VaA 0.8225
+  Ep 10/30 | TrA 0.9782 | VaA 0.9069
+  Ep 20/30 | TrA 0.9922 | VaA 0.9192
+  Ep 30/30 | TrA 0.9950 | VaA 0.9185
+  Best Val: 0.9278 | 50.2m
+    -> saved ./results\scenario2\inception_v3_last_block_grads.png
+
+>>> inception_v3 / full_finetune
+  Trainable: 21,847,038/21,847,038 (100.0%)
+  Ep  1/30 | TrA 0.7533 | VaA 0.8983
+  Ep 10/30 | TrA 0.9923 | VaA 0.9574
+  Ep 20/30 | TrA 0.9991 | VaA 0.9668
+  Ep 30/30 | TrA 0.9993 | VaA 0.9675
+  Best Val: 0.9690 | 63.2m
+    -> saved ./results\scenario2\inception_v3_full_finetune_grads.png
+
+>>> inception_v3 / selective_20pct
+    -> saved ./results\scenario2\inception_v3_sensitivity.png
+  [model] Auto-selected layers: ['Conv2d_1a_3x3', 'Conv2d_3b_1x1', 'Conv2d_2a_3x3', 'Mixed_5d', 'Mixed_5b', 'Mixed_5c', 'Conv2d_2b_3x3', 'Mixed_6b', 'Mixed_6d', 'Conv2d_4a_3x3']
+  Trainable: 4,041,086/21,847,038 (18.5%)
+  Ep  1/30 | TrA 0.2019 | VaA 0.4062
+  Ep 10/30 | TrA 0.9403 | VaA 0.9235
+  Ep 20/30 | TrA 0.9822 | VaA 0.9430
+  Ep 30/30 | TrA 0.9857 | VaA 0.9517
+  Best Val: 0.9517 | 60.3m
+C:\Users\khand\Downloads\GNR-Assignment-2\.venv\Lib\site-packages\matplotlib\transforms.py:2437: RuntimeWarning: invalid value encountered in dot
+  return Affine2D(np.dot(self._b.get_affine().get_matrix(),
+C:\Users\khand\Downloads\GNR-Assignment-2\.venv\Lib\site-packages\matplotlib\transforms.py:2437: RuntimeWarning: invalid value encountered in dot
+  return Affine2D(np.dot(self._b.get_affine().get_matrix(),
+    -> saved ./results\scenario2\inception_v3_selective_20pct_grads.png
+
+>>> densenet121 / linear_probe
+
+=======================================================
+  densenet121
+  Input size      : 224x224
+  Total params    :    6,984,606
+  Trainable params:    6,984,606
+  Frozen params   :            0
+  MACs            : 2.87 GMac
+  FLOPs (approx)  : 5.74 GFLOPs
+=======================================================
+  Trainable: 30,750/6,984,606 (0.4%)
+  Ep  1/30 | TrA 0.6116 | VaA 0.8023
+  Ep 10/30 | TrA 0.9172 | VaA 0.8961
+  Ep 20/30 | TrA 0.9461 | VaA 0.9076
+  Ep 30/30 | TrA 0.9506 | VaA 0.9105
+  Best Val: 0.9105 | 43.9m
+    -> saved ./results\scenario2\densenet121_linear_probe_grads.png
+
+>>> densenet121 / last_block
+  [model] Unfroze last block: norm5 (2,048 params)
+  Trainable: 32,798/6,984,606 (0.5%)
+  Ep  1/30 | TrA 0.1998 | VaA 0.4026
+  Ep 10/30 | TrA 0.8163 | VaA 0.8297
+  Ep 20/30 | TrA 0.8550 | VaA 0.8579
+  Ep 30/30 | TrA 0.8630 | VaA 0.8658
+  Best Val: 0.8709 | 38.9m
+    -> saved ./results\scenario2\densenet121_last_block_grads.png
+
+>>> densenet121 / full_finetune
+  Trainable: 6,984,606/6,984,606 (100.0%)
+  Ep  1/30 | TrA 0.5541 | VaA 0.8730
+  Ep 10/30 | TrA 0.9872 | VaA 0.9683
+  Ep 20/30 | TrA 0.9979 | VaA 0.9711
+  Ep 30/30 | TrA 0.9977 | VaA 0.9747
+  Best Val: 0.9747 | 46.1m
+    -> saved ./results\scenario2\densenet121_full_finetune_grads.png
+
+>>> densenet121 / selective_20pct
+    -> saved ./results\scenario2\densenet121_sensitivity.png
+  [model] Auto-selected layers: ['stem', 'denseblock1', 'norm5']
+  Trainable: 410,654/6,984,606 (5.9%)
+  Ep  1/30 | TrA 0.2046 | VaA 0.4365
+  Ep 10/30 | TrA 0.8636 | VaA 0.8665
+  Ep 20/30 | TrA 0.9023 | VaA 0.8925
+  Ep 30/30 | TrA 0.9092 | VaA 0.8968
+  Best Val: 0.9033 | 44.8m
+    -> saved ./results\scenario2\densenet121_selective_20pct_grads.png
+
+---------------------------------------------------------------------------
+SCENARIO 2 SUMMARY
+Model                  Strategy              Unfrozen%   Best Acc
+convnext_tiny          linear_probe                0.1     0.9365
+convnext_tiny          last_block                 55.7     0.9683
+convnext_tiny          full_finetune             100.0     0.9776
+convnext_tiny          selective_20pct             4.5     0.9538
+inception_v3           linear_probe                0.3     0.8571
+inception_v3           last_block                 28.1     0.9278
+inception_v3           full_finetune             100.0     0.9690
+inception_v3           selective_20pct            18.5     0.9517
+densenet121            linear_probe                0.4     0.9105
+densenet121            last_block                  0.5     0.8709
+densenet121            full_finetune             100.0     0.9747
+densenet121            selective_20pct             5.9     0.9033
+[data] Split already exists at ./results\_split
+
+======================================================================
+SCENARIO 3: FEW-SHOT LEARNING ANALYSIS
+======================================================================
+
+>>> convnext_tiny / 100% data / 30 epochs
+
+=======================================================
+  convnext_tiny
+  Input size      : 224x224
+  Total params    :   27,843,198
+  Trainable params:   27,843,198
+  Frozen params   :            0
+  MACs            : 4.48 GMac
+  FLOPs (approx)  : 8.96 GFLOPs
+=======================================================
+  [FS-convnext_tiny-100%] Ep  1/30 | TrL 0.8057 TrA 0.7696 | VaL 0.3150 VaA 0.9004
+  [FS-convnext_tiny-100%] Ep  5/30 | TrL 0.0425 TrA 0.9873 | VaL 0.1727 VaA 0.9430
+  [FS-convnext_tiny-100%] Ep 10/30 | TrL 0.0312 TrA 0.9914 | VaL 0.1903 VaA 0.9509
+  [FS-convnext_tiny-100%] Ep 15/30 | TrL 0.0003 TrA 1.0000 | VaL 0.1117 VaA 0.9697
+  [FS-convnext_tiny-100%] Ep 20/30 | TrL 0.0002 TrA 1.0000 | VaL 0.1143 VaA 0.9704
+  [FS-convnext_tiny-100%] Ep 25/30 | TrL 0.0002 TrA 1.0000 | VaL 0.1116 VaA 0.9719
+  [FS-convnext_tiny-100%] Ep 30/30 | TrL 0.0001 TrA 1.0000 | VaL 0.1101 VaA 0.9719
+  [FS-convnext_tiny-100%] Done 43.1m | Best Val 0.9726
+
+>>> convnext_tiny / 20% data / 20 epochs
+  [data] Sub-sampled: 1109/5607 (20%)
+  [FS-convnext_tiny-20%] Ep  1/20 | TrL 2.4617 TrA 0.3372 | VaL 0.9538 VaA 0.7013
+  [FS-convnext_tiny-20%] Ep  5/20 | TrL 0.0866 TrA 0.9720 | VaL 0.4052 VaA 0.8766
+  [FS-convnext_tiny-20%] Ep 10/20 | TrL 0.0019 TrA 1.0000 | VaL 0.1832 VaA 0.9430
+  [FS-convnext_tiny-20%] Ep 15/20 | TrL 0.0009 TrA 1.0000 | VaL 0.1803 VaA 0.9488
+  [FS-convnext_tiny-20%] Ep 20/20 | TrL 0.0008 TrA 1.0000 | VaL 0.1804 VaA 0.9481
+  [FS-convnext_tiny-20%] Done 9.4m | Best Val 0.9509
+
+>>> convnext_tiny / 5% data / 20 epochs
+  [data] Sub-sampled: 267/5607 (5%)
+  [FS-convnext_tiny-5%] Ep  1/20 | TrL 3.8216 TrA 0.0262 | VaL 3.2268 VaA 0.1364
+  [FS-convnext_tiny-5%] Ep  5/20 | TrL 0.2124 TrA 0.9438 | VaL 0.6880 VaA 0.8038
+  [FS-convnext_tiny-5%] Ep 10/20 | TrL 0.0058 TrA 1.0000 | VaL 0.5313 VaA 0.8506
+  [FS-convnext_tiny-5%] Ep 15/20 | TrL 0.0026 TrA 1.0000 | VaL 0.4882 VaA 0.8615
+  [FS-convnext_tiny-5%] Ep 20/20 | TrL 0.0024 TrA 1.0000 | VaL 0.4877 VaA 0.8636
+  [FS-convnext_tiny-5%] Done 5.6m | Best Val 0.8636
+
+>>> inception_v3 / 100% data / 30 epochs
+
+=======================================================
+  inception_v3
+  Input size      : 299x299
+  Total params    :   21,847,038
+  Trainable params:   21,847,038
+  Frozen params   :            0
+  MACs            : 5.74 GMac
+  FLOPs (approx)  : 11.47 GFLOPs
+=======================================================
+  [FS-inception_v3-100%] Ep  1/30 | TrL 0.8684 TrA 0.7649 | VaL 0.2914 VaA 0.9134
+  [FS-inception_v3-100%] Ep  5/30 | TrL 0.0777 TrA 0.9750 | VaL 0.1970 VaA 0.9466
+  [FS-inception_v3-100%] Ep 10/30 | TrL 0.0305 TrA 0.9900 | VaL 0.2046 VaA 0.9444
+  [FS-inception_v3-100%] Ep 15/30 | TrL 0.0204 TrA 0.9945 | VaL 0.1698 VaA 0.9574
+  [FS-inception_v3-100%] Ep 20/30 | TrL 0.0086 TrA 0.9977 | VaL 0.1661 VaA 0.9574
+  [FS-inception_v3-100%] Ep 25/30 | TrL 0.0048 TrA 0.9982 | VaL 0.1373 VaA 0.9668
+  [FS-inception_v3-100%] Ep 30/30 | TrL 0.0019 TrA 0.9995 | VaL 0.1465 VaA 0.9690
+  [FS-inception_v3-100%] Done 50.2m | Best Val 0.9690
+
+>>> inception_v3 / 20% data / 20 epochs
+  [data] Sub-sampled: 1109/5607 (20%)
+  [FS-inception_v3-20%] Ep  1/20 | TrL 2.3908 TrA 0.4238 | VaL 1.0075 VaA 0.7006
+  [FS-inception_v3-20%] Ep  5/20 | TrL 0.0723 TrA 0.9856 | VaL 0.4783 VaA 0.8615
+  [FS-inception_v3-20%] Ep 10/20 | TrL 0.0295 TrA 0.9928 | VaL 0.3758 VaA 0.8997
+  [FS-inception_v3-20%] Ep 15/20 | TrL 0.0107 TrA 0.9982 | VaL 0.3563 VaA 0.9019
+  [FS-inception_v3-20%] Ep 20/20 | TrL 0.0079 TrA 0.9982 | VaL 0.3449 VaA 0.9098
+  [FS-inception_v3-20%] Done 10.5m | Best Val 0.9098
+
+>>> inception_v3 / 5% data / 20 epochs
+  [data] Sub-sampled: 267/5607 (5%)
+  [FS-inception_v3-5%] Ep  1/20 | TrL 4.2785 TrA 0.0861 | VaL 2.9696 VaA 0.2662
+  [FS-inception_v3-5%] Ep  5/20 | TrL 0.1326 TrA 0.9700 | VaL 0.9842 VaA 0.7092
+  [FS-inception_v3-5%] Ep 10/20 | TrL 0.0310 TrA 0.9925 | VaL 0.8816 VaA 0.7460
+  [FS-inception_v3-5%] Ep 15/20 | TrL 0.0186 TrA 1.0000 | VaL 0.8570 VaA 0.7540
+  [FS-inception_v3-5%] Ep 20/20 | TrL 0.0227 TrA 0.9963 | VaL 0.8514 VaA 0.7511
+  [FS-inception_v3-5%] Done 6.1m | Best Val 0.7597
+
+>>> densenet121 / 100% data / 30 epochs
+
+=======================================================
+  densenet121
+  Input size      : 224x224
+  Total params    :    6,984,606
+  Trainable params:    6,984,606
+  Frozen params   :            0
+  MACs            : 2.87 GMac
+  FLOPs (approx)  : 5.74 GFLOPs
+=======================================================
+  [FS-densenet121-100%] Ep  1/30 | TrL 1.9663 TrA 0.5566 | VaL 0.6496 VaA 0.8759
+  [FS-densenet121-100%] Ep  5/30 | TrL 0.1478 TrA 0.9631 | VaL 0.1555 VaA 0.9545
+  [FS-densenet121-100%] Ep 10/30 | TrL 0.0501 TrA 0.9897 | VaL 0.1052 VaA 0.9704
+  [FS-densenet121-100%] Ep 15/30 | TrL 0.0259 TrA 0.9941 | VaL 0.1052 VaA 0.9668
+  [FS-densenet121-100%] Ep 20/30 | TrL 0.0177 TrA 0.9964 | VaL 0.0984 VaA 0.9711
+  [FS-densenet121-100%] Ep 25/30 | TrL 0.0123 TrA 0.9977 | VaL 0.0958 VaA 0.9675
+  [FS-densenet121-100%] Ep 30/30 | TrL 0.0127 TrA 0.9977 | VaL 0.0968 VaA 0.9697
+  [FS-densenet121-100%] Done 45.3m | Best Val 0.9719
+
+>>> densenet121 / 20% data / 20 epochs
+  [data] Sub-sampled: 1109/5607 (20%)
+  [FS-densenet121-20%] Ep  1/20 | TrL 3.1657 TrA 0.1749 | VaL 2.7717 VaA 0.3492
+  [FS-densenet121-20%] Ep  5/20 | TrL 0.7693 TrA 0.8756 | VaL 0.6906 VaA 0.8759
+  [FS-densenet121-20%] Ep 10/20 | TrL 0.2335 TrA 0.9693 | VaL 0.3595 VaA 0.9055
+  [FS-densenet121-20%] Ep 15/20 | TrL 0.1375 TrA 0.9883 | VaL 0.3099 VaA 0.9242
+  [FS-densenet121-20%] Ep 20/20 | TrL 0.1430 TrA 0.9802 | VaL 0.2907 VaA 0.9278
+  [FS-densenet121-20%] Done 9.7m | Best Val 0.9307
+
+>>> densenet121 / 5% data / 20 epochs
+  [data] Sub-sampled: 267/5607 (5%)
+  [FS-densenet121-5%] Ep  1/20 | TrL 3.4648 TrA 0.0487 | VaL 3.3184 VaA 0.0823
+  [FS-densenet121-5%] Ep  5/20 | TrL 2.3631 TrA 0.6292 | VaL 2.6605 VaA 0.3911
+  [FS-densenet121-5%] Ep 10/20 | TrL 1.5325 TrA 0.8689 | VaL 1.9460 VaA 0.6313
+  [FS-densenet121-5%] Ep 15/20 | TrL 1.0491 TrA 0.9588 | VaL 1.6516 VaA 0.7042
+  [FS-densenet121-5%] Ep 20/20 | TrL 0.9978 TrA 0.9775 | VaL 1.6029 VaA 0.7107
+  [FS-densenet121-5%] Done 5.5m | Best Val 0.7107
+
+--------------------------------------------------------------------------------
+SCENARIO 3 SUMMARY
+Model                      100%      20%       5%    Delta   Gap@5%
+convnext_tiny            0.9726   0.9509   0.8636   0.1120   0.1364
+inception_v3             0.9690   0.9098   0.7597   0.2159   0.2452
+densenet121              0.9719   0.9307   0.7107   0.2687   0.2668
+
+Results saved to ./results\scenario3
+[data] Split already exists at ./results\_split
+
+======================================================================
+SCENARIO 4: CORRUPTION ROBUSTNESS
+======================================================================
+
+>>> convnext_tiny - Training on clean data ...
+
+=======================================================
+  convnext_tiny
+  Input size      : 224x224
+  Total params    :   27,843,198
+  Trainable params:   27,843,198
+  Frozen params   :            0
+  MACs            : 4.48 GMac
+  FLOPs (approx)  : 8.96 GFLOPs
+=======================================================
+  [S4-convnext_tiny] Ep  1/30 | TrL 0.8057 TrA 0.7696 | VaL 0.3150 VaA 0.9004
+  [S4-convnext_tiny] Ep  5/30 | TrL 0.0425 TrA 0.9873 | VaL 0.1727 VaA 0.9430
+  [S4-convnext_tiny] Ep 10/30 | TrL 0.0312 TrA 0.9914 | VaL 0.1903 VaA 0.9509
+  [S4-convnext_tiny] Ep 15/30 | TrL 0.0003 TrA 1.0000 | VaL 0.1117 VaA 0.9697
+  [S4-convnext_tiny] Ep 20/30 | TrL 0.0002 TrA 1.0000 | VaL 0.1143 VaA 0.9704
+  [S4-convnext_tiny] Ep 25/30 | TrL 0.0002 TrA 1.0000 | VaL 0.1116 VaA 0.9719
+  [S4-convnext_tiny] Ep 30/30 | TrL 0.0001 TrA 1.0000 | VaL 0.1101 VaA 0.9719
+  [S4-convnext_tiny] Done 43.2m | Best Val 0.9726
+  clean: 0.9726
+  gauss_005: 0.9134
+  gauss_01: 0.6811
+  gauss_02: 0.2157
+  motion_blur: 0.7056
+  brightness: 0.9401
+
+>>> inception_v3 - Training on clean data ...
+
+=======================================================
+  inception_v3
+  Input size      : 299x299
+  Total params    :   21,847,038
+  Trainable params:   21,847,038
+  Frozen params   :            0
+  MACs            : 5.74 GMac
+  FLOPs (approx)  : 11.47 GFLOPs
+=======================================================
+  [S4-inception_v3] Ep  1/30 | TrL 0.8684 TrA 0.7649 | VaL 0.2914 VaA 0.9134
+  [S4-inception_v3] Ep  5/30 | TrL 0.0777 TrA 0.9750 | VaL 0.1970 VaA 0.9466
+  [S4-inception_v3] Ep 10/30 | TrL 0.0305 TrA 0.9900 | VaL 0.2046 VaA 0.9444
+  [S4-inception_v3] Ep 15/30 | TrL 0.0204 TrA 0.9945 | VaL 0.1698 VaA 0.9574
+  [S4-inception_v3] Ep 20/30 | TrL 0.0086 TrA 0.9977 | VaL 0.1661 VaA 0.9574
+  [S4-inception_v3] Ep 25/30 | TrL 0.0048 TrA 0.9982 | VaL 0.1373 VaA 0.9668
+  [S4-inception_v3] Ep 30/30 | TrL 0.0019 TrA 0.9995 | VaL 0.1465 VaA 0.9690
+  [S4-inception_v3] Done 50.6m | Best Val 0.9690
+  clean: 0.9690
+  gauss_005: 0.8932
+  gauss_01: 0.7302
+  gauss_02: 0.2742
+  motion_blur: 0.6162
+  brightness: 0.9437
+
+>>> densenet121 - Training on clean data ...
+
+=======================================================
+  densenet121
+  Input size      : 224x224
+  Total params    :    6,984,606
+  Trainable params:    6,984,606
+  Frozen params   :            0
+  MACs            : 2.87 GMac
+  FLOPs (approx)  : 5.74 GFLOPs
+=======================================================
+  [S4-densenet121] Ep  1/30 | TrL 1.9663 TrA 0.5566 | VaL 0.6496 VaA 0.8759
+  [S4-densenet121] Ep  5/30 | TrL 0.1478 TrA 0.9631 | VaL 0.1555 VaA 0.9545
+  [S4-densenet121] Ep 10/30 | TrL 0.0501 TrA 0.9897 | VaL 0.1052 VaA 0.9704
+  [S4-densenet121] Ep 15/30 | TrL 0.0259 TrA 0.9941 | VaL 0.1052 VaA 0.9668
+  [S4-densenet121] Ep 20/30 | TrL 0.0177 TrA 0.9964 | VaL 0.0984 VaA 0.9711
+  [S4-densenet121] Ep 25/30 | TrL 0.0123 TrA 0.9977 | VaL 0.0958 VaA 0.9675
+  [S4-densenet121] Ep 30/30 | TrL 0.0127 TrA 0.9977 | VaL 0.0968 VaA 0.9697
+  [S4-densenet121] Done 45.3m | Best Val 0.9719
+  clean: 0.9719
+  gauss_005: 0.6205
+  gauss_01: 0.1349
+  gauss_02: 0.0303
+  motion_blur: 0.5729
+  brightness: 0.9473
+
+------------------------------------------------------------------------------------------
+SCENARIO 4 SUMMARY
+Model                          clean     gauss_005      gauss_01      gauss_02   motion_blur    brightness
+convnext_tiny                 0.9726        0.9134        0.6811        0.2157        0.7056        0.9401
+inception_v3                  0.9690        0.8932        0.7302        0.2742        0.6162        0.9437
+densenet121                   0.9719        0.6205        0.1349        0.0303        0.5729        0.9473
+
+Model                  Corruption         Corr Error   Rel Robust
+convnext_tiny          gauss_005              0.0866       0.9392
+convnext_tiny          gauss_01               0.3189       0.7003
+convnext_tiny          gauss_02               0.7843       0.2218
+convnext_tiny          motion_blur            0.2944       0.7255
+convnext_tiny          brightness             0.0599       0.9666
+inception_v3           gauss_005              0.1068       0.9218
+inception_v3           gauss_01               0.2698       0.7535
+inception_v3           gauss_02               0.7258       0.2829
+inception_v3           motion_blur            0.3838       0.6359
+inception_v3           brightness             0.0563       0.9739
+densenet121            gauss_005              0.3795       0.6385
+densenet121            gauss_01               0.8651       0.1388
+densenet121            gauss_02               0.9697       0.0312
+densenet121            motion_blur            0.4271       0.5895
+densenet121            brightness             0.0527       0.9748
+
+Results saved to ./results\scenario4
+[data] Split already exists at ./results\_split
+
+======================================================================
+SCENARIO 5: LAYER-WISE FEATURE PROBING
+======================================================================
+PCA subset: 900 samples (30 classes x 30 samples)
+
+>>> convnext_tiny
+
+=======================================================
+  convnext_tiny
+  Input size      : 224x224
+  Total params    :   27,843,198
+  Trainable params:   27,843,198
+  Frozen params   :            0
+  MACs            : 4.48 GMac
+  FLOPs (approx)  : 8.96 GFLOPs
+=======================================================
+  [early] Extracting features ...
+    dim=96, norm=11.15 +/- 0.83
+    Val probe accuracy: 0.7222
+  [middle] Extracting features ...
+    dim=384, norm=183.12 +/- 16.18
+    Val probe accuracy: 0.9495
+  [final] Extracting features ...
+    dim=768, norm=10.45 +/- 1.12
+    Val probe accuracy: 0.9322
+
+>>> inception_v3
+
+=======================================================
+  inception_v3
+  Input size      : 299x299
+  Total params    :   21,847,038
+  Trainable params:   21,847,038
+  Frozen params   :            0
+  MACs            : 5.74 GMac
+  FLOPs (approx)  : 11.47 GFLOPs
+=======================================================
+  [early] Extracting features ...
+    dim=256, norm=18.92 +/- 0.59
+    Val probe accuracy: 0.8268
+  [middle] Extracting features ...
+    dim=768, norm=18.58 +/- 1.49
+    Val probe accuracy: 0.9076
+  [final] Extracting features ...
+    dim=2048, norm=22.72 +/- 2.87
+    Val probe accuracy: 0.8997
+
+>>> densenet121
+
+=======================================================
+  densenet121
+  Input size      : 224x224
+  Total params    :    6,984,606
+  Trainable params:    6,984,606
+  Frozen params   :            0
+  MACs            : 2.87 GMac
+  FLOPs (approx)  : 5.74 GFLOPs
+=======================================================
+  [early] Extracting features ...
+    dim=256, norm=94.22 +/- 18.37
+C:\Users\khand\Downloads\GNR-Assignment-2\.venv\Lib\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 5000 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=5000).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+    Val probe accuracy: 0.7569
+  [middle] Extracting features ...
+    dim=1024, norm=27.75 +/- 1.91
+    Val probe accuracy: 0.9351
+  [final] Extracting features ...
+    dim=1024, norm=28.38 +/- 0.73
+    Val probe accuracy: 0.9387
+
+-----------------------------------------------------------------
+SCENARIO 5 SUMMARY
+Model                  Depth     Val Acc  Norm mean   Norm std
+convnext_tiny          early      0.7222      11.15       0.83
+convnext_tiny          middle     0.9495     183.12      16.18
+convnext_tiny          final      0.9322      10.45       1.12
+inception_v3           early      0.8268      18.92       0.59
+inception_v3           middle     0.9076      18.58       1.49
+inception_v3           final      0.8997      22.72       2.87
+densenet121            early      0.7569      94.22      18.37
+densenet121            middle     0.9351      27.75       1.91
+densenet121            final      0.9387      28.38       0.73
+
+Results saved to ./results\scenario5
+
+======================================================================
+ALL DONE
+======================================================================

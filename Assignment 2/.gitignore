@@ -1,0 +1,31 @@
+# Python stuff
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.env
+
+# Data
+train_data.zip
+train_data/
+
+# Results
+# Track all results except the automatically generated train/val split
+**/_split/
+
+# LaTeX build artifacts (Ignore but keep .pdf and .tex)
+*.aux
+*.bcf
+*.log
+*.out
+*.run.xml
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.blg
+*.bbl
+
+# OS stuff
+.DS_Store
+Thumbs.db

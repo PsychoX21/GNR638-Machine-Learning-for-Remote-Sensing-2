@@ -14,6 +14,17 @@ This repository contains coursework, assignments, and projects for **GNR638: Mac
   - Implementation of ResNet-20 for MNIST and CIFAR-100 ($>99\%$ and $\sim70\%$ accuracy).
   - Optimized build system with `pybind11` integration.
 
+### Assignment 2
+
+**Objective**: Study pre-trained CNN representation transfer, fine-tuning strategies, and robustness under data constraints and input corruption.
+
+- **Key Features**:
+  - Comparative analysis of 5 CNN architectures (ResNet, Inception, DenseNet, EfficientNet, ConvNeXt).
+  - Evaluation of fine-tuning strategies and automated sensitivity-based layer selection.
+  - Robustness testing against Gaussian noise, motion blur, and brightness shifts.
+  - Data efficiency analysis under few-shot (5% and 20%) settings.
+  - Layer-wise feature probing to analyze representation quality across network depth.
+
 ---
 
 **Collaborators**:
