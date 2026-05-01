@@ -46,10 +46,10 @@ echo "[3/4] Installing dependencies..."
 eval "$(conda shell.bash hook)"
 conda activate gnr_project_env
 
-pip install "vllm>=0.11.0"
 pip install "torch>=2.4.0" torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+pip install "vllm>=0.11.0"
 pip install "transformers>=4.45.0" accelerate huggingface_hub
-pip install Pillow numpy pandas sympy openai uvloop
+pip install Pillow numpy pandas sympy openai uvloop bitsandbytes
 
 # 4. Download model weights
 echo "[4/4] Downloading Qwen/Qwen3.5-27B-FP8 weights..."

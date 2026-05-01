@@ -40,9 +40,9 @@ class Timer:
     def get_strategy(self) -> Strategy:
         tpq = self.time_per_question
 
-        if tpq > 55:
+        if tpq > 65:
             strategy = Strategy.FULL
-        elif tpq > 35:
+        elif tpq > 40:
             strategy = Strategy.STANDARD
         elif tpq > 15:
             strategy = Strategy.FAST
