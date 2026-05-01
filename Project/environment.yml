@@ -6,11 +6,12 @@ dependencies:
   - python=3.11
   - pip
   - pip:
-    - torch==2.4.0
+    - --extra-index-url https://download.pytorch.org/whl/cu124
+    - vllm>=0.11.0
+    - torch>=2.4.0
     - torchvision
     - torchaudio
     - transformers>=4.45.0
-    - vllm>=0.11.0
     - accelerate
     - huggingface_hub
     - Pillow
@@ -19,3 +20,4 @@ dependencies:
     - sympy
     - openai
     - bitsandbytes
+    - uvloop
