@@ -72,19 +72,29 @@ def run_elimination(
 
     call_images = images if has_diagram else None
 
-    try:
-        response = model_manager.call_primary(
-            text_prompt=prompt,
-            images=call_images,
-            temperature=temperature,
-            max_tokens=4096,
-            thinking_mode=True,  # Deep reasoning with thinking trace
-        )
-    except Exception as e:
-        logger.error(f"Stage 3: Elimination failed: {e}")
-        return None, 0.0, ""
+    max_retries = 2
+    for attempt in range(max_retries + 1):
+        current_temp = temperature if attempt == 0 else min(0.7, temperature + 0.3 * attempt)
+        try:
+            response = model_manager.call_primary(
+                text_prompt=prompt,
+                images=call_images,
+                temperature=current_temp,
+                max_tokens=4096,
+                thinking_mode=True,  # Deep reasoning with thinking trace
+            )
+        except Exception as e:
+            logger.error(f"Stage 3: Elimination failed: {e}")
+            return None, 0.0, ""
 
-    answer, max_prob = _parse_elimination_response(response)
+        answer, max_prob = _parse_elimination_response(response)
+        
+        if answer is not None:
+            break
+            
+        if attempt < max_retries:
+            logger.warning(f"Stage 3: Output parse failed (hallucination). Retrying attempt {attempt+2}/{max_retries+1}...")
+
     logger.info(f"Stage 3 ({prompt_variant}): answer={answer}, max_prob={max_prob:.2f}")
     return answer, max_prob, response
 

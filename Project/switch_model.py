@@ -35,7 +35,7 @@ def update_setup_bash(setup_path, old_model_id, new_model_id, new_dir_name):
         f.write(content)
     print(f"Updated {setup_path} successfully.")
 
-def update_model_manager(manager_path, new_model_id, new_dir_name, gpu_mem, max_len, enable_reasoning):
+def update_model_manager(manager_path, new_model_id, new_dir_name, gpu_mem, max_len, enable_reasoning, enforce_eager):
     if not os.path.exists(manager_path):
         print(f"Error: {manager_path} not found.")
         return
@@ -79,19 +79,30 @@ def update_model_manager(manager_path, new_model_id, new_dir_name, gpu_mem, max_
 
     # Handle reasoning flags in the cmd array
     if enable_reasoning:
-        # If it's missing, we need to add it after --disable-log-requests
-        if '"--enable-reasoning"' not in content:
+        # If it's missing, we need to add it after --disable-log-stats
+        if '"--reasoning-parser"' not in content:
             content = re.sub(
-                r'("--disable-log-requests",?)',
-                r'\1\n            "--reasoning-parser", "qwen3",\n            "--enable-reasoning",',
+                r'("--disable-log-stats",?)',
+                r'\1\n            "--reasoning-parser", "qwen3",',
                 content
             )
     else:
         # Remove reasoning lines
-        content = re.sub(r'\s*"--reasoning-parser",\s*"[^"]+",\n', '\n', content)
-        content = re.sub(r'\s*"--enable-reasoning",?\n', '\n', content)
-        # Fix dangling commas if needed
-        content = re.sub(r',\s+]', '\n        ]', content)
+        content = re.sub(r'\s*"--reasoning-parser",\s*"[^"]+",?\n?', '\n', content)
+
+    # Handle enforce-eager flag
+    if enforce_eager:
+        if '"--enforce-eager"' not in content:
+            content = re.sub(
+                r'("--disable-log-stats",?)',
+                r'\1\n            "--enforce-eager",',
+                content
+            )
+    else:
+        content = re.sub(r'\s*"--enforce-eager",?\n?', '\n', content)
+
+    # Fix dangling commas if needed
+    content = re.sub(r',\s+]', '\n        ]', content)
 
     with open(manager_path, "w", encoding="utf-8") as f:
         f.write(content)
@@ -111,15 +122,17 @@ def main():
 
     # Defaults based on profile
     if args.profile == "local":
-        model_id = "Qwen/Qwen2.5-VL-3B-Instruct"
-        gpu_mem = "0.90"
-        max_len = "4096"
+        model_id = "Qwen/Qwen2-VL-2B-Instruct"
+        gpu_mem = "0.80"
+        max_len = "6144"
         enable_reasoning = False
+        enforce_eager = True
     elif args.profile == "prod":
         model_id = "Qwen/Qwen3.5-27B-FP8"
         gpu_mem = "0.88"
         max_len = "16384"
         enable_reasoning = True
+        enforce_eager = False
 
     # Overrides
     if args.model_id:
@@ -140,13 +153,14 @@ def main():
     print(f"  Local Dir: {new_dir_name}")
     print(f"  GPU Mem  : {gpu_mem}")
     print(f"  Max Len  : {max_len}")
-    print(f"  Reasoning: {'Enabled' if enable_reasoning else 'Disabled'}\n")
+    print(f"  Reasoning: {'Enabled' if enable_reasoning else 'Disabled'}")
+    print(f"  Eager Mode:{'Enabled' if enforce_eager else 'Disabled'}\n")
 
     setup_bash_path = "setup.bash"
     model_manager_path = os.path.join("src", "model_manager.py")
 
     update_setup_bash(setup_bash_path, None, model_id, new_dir_name)
-    update_model_manager(model_manager_path, model_id, new_dir_name, gpu_mem, max_len, enable_reasoning)
+    update_model_manager(model_manager_path, model_id, new_dir_name, gpu_mem, max_len, enable_reasoning, enforce_eager)
 
     print("\nDone! Please review the changes using git diff if needed.")
 

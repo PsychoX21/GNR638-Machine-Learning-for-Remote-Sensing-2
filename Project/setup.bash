@@ -52,7 +52,7 @@ pip install "transformers>=4.45.0" accelerate huggingface_hub
 pip install Pillow numpy pandas sympy openai uvloop
 
 # 4. Download model weights
-echo "[4/4] Downloading Qwen3.5-27B-FP8 weights..."
+echo "[4/4] Downloading Qwen/Qwen3.5-27B-FP8 weights..."
 python -c "
 from huggingface_hub import snapshot_download
 snapshot_download(

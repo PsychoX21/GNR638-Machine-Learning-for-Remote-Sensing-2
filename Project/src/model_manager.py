@@ -36,7 +36,7 @@ class ModelManager:
         self._model_id: Optional[str] = None
 
     def start_primary_model(self) -> None:
-        logger.info("Starting vLLM server for Qwen3.5-27B-FP8...")
+        logger.info("Starting vLLM server for Qwen/Qwen3.5-27B-FP8...")
 
         model_path = PRIMARY_MODEL_PATH
         if not os.path.exists(model_path):
@@ -52,9 +52,8 @@ class ModelManager:
             "--dtype", "auto",
             "--port", str(VLLM_PORT),
             "--trust-remote-code",
-            "--disable-log-requests",
-            "--reasoning-parser", "qwen3",
-            "--enable-reasoning",
+            "--disable-log-stats",
+            "--reasoning-parser", "qwen3"
         ]
 
         logger.info(f"vLLM cmd: {' '.join(cmd)}")
@@ -70,7 +69,7 @@ class ModelManager:
             preexec_fn=os.setsid,
         )
 
-        self._wait_for_vllm_ready(timeout=300)
+        self._wait_for_vllm_ready(timeout=900)
 
         from openai import OpenAI
         self._openai_client = OpenAI(
@@ -87,7 +86,7 @@ class ModelManager:
 
         logger.info("vLLM server ready.")
 
-    def _wait_for_vllm_ready(self, timeout: int = 300) -> None:
+    def _wait_for_vllm_ready(self, timeout: int = 900) -> None:
         import urllib.request
         import urllib.error
 
@@ -142,7 +141,7 @@ class ModelManager:
 
         messages = [
             {"role": "system", "content": system_content},
-            {"role": "user", "content": user_content},
+            {"role": "user", "content": user_content}
         ]
 
         try:
@@ -186,7 +185,7 @@ class ModelManager:
 
         messages = [
             {"role": "system", "content": system_content},
-            {"role": "user", "content": user_content},
+            {"role": "user", "content": user_content}
         ]
 
         try:
