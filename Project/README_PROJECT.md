@@ -32,11 +32,6 @@ python inference.py --test_dir <absolute_path_to_test_dir>
 
 ## Output
 `submission.csv` in the current directory:
-```csv
-image_name,option
-image_1,3
-image_2,5
-```
 Options 1-4 = answer, 5 = skip.
 
 ## Project Structure
