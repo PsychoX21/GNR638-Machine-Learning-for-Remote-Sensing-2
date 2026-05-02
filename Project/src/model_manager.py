@@ -53,6 +53,7 @@ class ModelManager:
             "--port", str(VLLM_PORT),
             "--trust-remote-code",
             "--disable-log-stats",
+            "--enforce-eager",
             "--reasoning-parser", "qwen3"
         ]
 

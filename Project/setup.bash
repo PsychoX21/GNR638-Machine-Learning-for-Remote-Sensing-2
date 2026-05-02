@@ -46,10 +46,16 @@ echo "[3/4] Installing dependencies..."
 eval "$(conda shell.bash hook)"
 conda activate gnr_project_env
 
-pip install "torch>=2.4.0" torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
-pip install "vllm>=0.11.0"
-pip install "transformers>=4.45.0" accelerate huggingface_hub
-pip install Pillow numpy pandas sympy openai uvloop bitsandbytes
+# Install uv for fast, reliable dependency resolution
+pip install uv==0.7.8
+
+# Install vLLM with CUDA 12.6 backend (this pulls the correct torch automatically)
+# vLLM 0.19.1 = last release before 0.20.0 switched to CUDA 13.0
+uv pip install vllm==0.19.1 --torch-backend=cu126
+
+# Install remaining pinned dependencies
+uv pip install transformers==4.51.3 accelerate==1.6.0 huggingface_hub==0.30.2
+uv pip install Pillow==11.2.1 numpy==2.2.5 pandas==2.2.3 sympy==1.13.3 openai==1.82.0 uvloop==0.21.0
 
 # 4. Download model weights
 echo "[4/4] Downloading Qwen/Qwen3.5-27B-FP8 weights..."
@@ -71,6 +77,8 @@ print(f'CUDA available: {torch.cuda.is_available()}')
 if torch.cuda.is_available():
     print(f'GPU: {torch.cuda.get_device_name(0)}')
     print(f'VRAM: {torch.cuda.get_device_properties(0).total_memory / 1e9:.1f} GB')
+print(f'vLLM: {vllm.__version__}')
+print(f'Transformers: {transformers.__version__}')
 "
 
 echo "============================================"

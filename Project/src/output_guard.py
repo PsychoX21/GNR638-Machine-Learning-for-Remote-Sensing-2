@@ -26,9 +26,9 @@ def write_submission_csv(results: List[Tuple[str, int]], output_path: str = "sub
     try:
         with open(temp_path, "w", newline="") as f:
             writer = csv.writer(f)
-            writer.writerow(["image_name", "option"])
+            writer.writerow(["id", "image_name", "option"])
             for image_name, answer in safe_results:
-                writer.writerow([image_name, answer])
+                writer.writerow([image_name, image_name, answer])
         os.replace(temp_path, output_path)
         logger.info(f"Submission CSV: {output_path} ({len(safe_results)} entries)")
     except Exception as e:
@@ -37,8 +37,8 @@ def write_submission_csv(results: List[Tuple[str, int]], output_path: str = "sub
         try:
             with open(output_path, "w", newline="") as f:
                 writer = csv.writer(f)
-                writer.writerow(["image_name", "option"])
+                writer.writerow(["id", "image_name", "option"])
                 for image_name, answer in safe_results:
-                    writer.writerow([image_name, answer])
+                    writer.writerow([image_name, image_name, answer])
         except Exception as e2:
             logger.critical(f"CSV write completely failed: {e2}")
