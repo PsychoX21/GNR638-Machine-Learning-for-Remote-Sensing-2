@@ -17,8 +17,8 @@ def safe_output(raw_answer: Any) -> int:
     return 5
 
 
-def write_submission_csv(results: List[Tuple[str, int]], output_path: str = "submission.csv") -> None:
-    safe_results = [(name, safe_output(ans)) for name, ans in results]
+def write_submission_csv(results: List[Tuple[str, str, int]], output_path: str = "submission.csv") -> None:
+    safe_results = [(iid, name, safe_output(ans)) for iid, name, ans in results]
 
     # Write to temp file first, then atomic rename.
     # If process is killed mid-write, the previous submission.csv stays intact.
@@ -27,8 +27,8 @@ def write_submission_csv(results: List[Tuple[str, int]], output_path: str = "sub
         with open(temp_path, "w", newline="") as f:
             writer = csv.writer(f)
             writer.writerow(["id", "image_name", "option"])
-            for image_name, answer in safe_results:
-                writer.writerow([image_name, image_name, answer])
+            for image_id, image_name, answer in safe_results:
+                writer.writerow([image_id, image_name, answer])
         os.replace(temp_path, output_path)
         logger.info(f"Submission CSV: {output_path} ({len(safe_results)} entries)")
     except Exception as e:
@@ -38,7 +38,7 @@ def write_submission_csv(results: List[Tuple[str, int]], output_path: str = "sub
             with open(output_path, "w", newline="") as f:
                 writer = csv.writer(f)
                 writer.writerow(["id", "image_name", "option"])
-                for image_name, answer in safe_results:
-                    writer.writerow([image_name, image_name, answer])
+                for image_id, image_name, answer in safe_results:
+                    writer.writerow([image_id, image_name, answer])
         except Exception as e2:
             logger.critical(f"CSV write completely failed: {e2}")

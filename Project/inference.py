@@ -187,6 +187,13 @@ def main():
     try:
         df = pd.read_csv(test_csv_path)
         image_names = df["image_name"].tolist()
+        # Read image_id for the submission 'id' column (may differ from image_name)
+        if "image_id" in df.columns:
+            image_ids = df["image_id"].tolist()
+        elif "id" in df.columns:
+            image_ids = df["id"].tolist()
+        else:
+            image_ids = list(image_names)  # fallback: same as image_name
     except Exception as e:
         logger.critical(f"Failed to read test.csv: {e}")
         # Try to produce empty submission
@@ -206,7 +213,7 @@ def main():
 
     # SAFETY: Write initial submission.csv with all skips IMMEDIATELY.
     # If the process gets killed at any point, a valid submission.csv exists.
-    write_submission_csv([(name, 5) for name in image_names], "submission.csv")
+    write_submission_csv([(iid, name, 5) for iid, name in zip(image_ids, image_names)], "submission.csv")
     logger.info("Safety submission.csv written (all skips)")
 
     # Timer starts NOW — the 1-hour clock began when this script started
@@ -218,16 +225,20 @@ def main():
         model_manager.start_primary_model()
         logger.info(f"Model loaded. {timer.remaining_time:.0f}s remaining for questions.")
 
-        results: List[Tuple[str, int]] = []
+        results: List[Tuple[str, str, int]] = []  # (image_id, image_name, answer)
 
-        for idx, image_name in enumerate(image_names):
+        for idx, (image_id, image_name) in enumerate(zip(image_ids, image_names)):
             timer.start_question()
             strategy = timer.get_strategy()
 
-            image_path = os.path.join(test_dir, "images", f"{image_name}.png")
+            # Robust path: handle both 'img_001' and 'img_001.png' formats
+            if image_name.lower().endswith(".png"):
+                image_path = os.path.join(test_dir, "images", image_name)
+            else:
+                image_path = os.path.join(test_dir, "images", f"{image_name}.png")
             if not os.path.exists(image_path):
                 logger.error(f"Image not found: {image_path}")
-                results.append((image_name, 5))
+                results.append((image_id, image_name, 5))
                 timer.end_question()
                 continue
 
@@ -242,34 +253,34 @@ def main():
                 answer = 5
 
             answer = safe_output(answer)
-            results.append((image_name, answer))
+            results.append((image_id, image_name, answer))
             elapsed = timer.end_question()
             logger.info(f"[{image_name}] -> {answer} ({elapsed:.1f}s)")
 
             # Periodically update submission.csv so partial results survive kills
             if (idx + 1) % 5 == 0 or (idx + 1) == total_questions:
                 partial = list(results)
-                processed = {r[0] for r in partial}
-                for name in image_names:
-                    if name not in processed:
-                        partial.append((name, 5))
+                processed_ids = {r[0] for r in partial}
+                for iid, name in zip(image_ids, image_names):
+                    if iid not in processed_ids:
+                        partial.append((iid, name, 5))
                 write_submission_csv(partial, "submission.csv")
 
         # Final write with all results
         write_submission_csv(results, "submission.csv")
 
-        answered = sum(1 for _, a in results if a != 5)
-        skipped = sum(1 for _, a in results if a == 5)
+        answered = sum(1 for _, _, a in results if a != 5)
+        skipped = sum(1 for _, _, a in results if a == 5)
         logger.info(f"Done: {answered} answered, {skipped} skipped, {timer.elapsed:.0f}s total")
 
     except Exception as e:
         logger.critical(f"Fatal error: {e}\n{traceback.format_exc()}")
         # Write whatever results we have
         if 'results' in locals() and results:
-            processed = {r[0] for r in results}
-            for name in image_names:
-                if name not in processed:
-                    results.append((name, 5))
+            processed_ids = {r[0] for r in results}
+            for iid, name in zip(image_ids, image_names):
+                if iid not in processed_ids:
+                    results.append((iid, name, 5))
             write_submission_csv(results, "submission.csv")
         # else: safety CSV from the beginning is still valid
         logger.info("Emergency submission.csv updated")
